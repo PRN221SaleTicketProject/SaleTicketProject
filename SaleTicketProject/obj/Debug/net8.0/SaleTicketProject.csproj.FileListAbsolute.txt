@@ -74,3 +74,4 @@ C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\refin
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.pdb
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.genruntimeconfig.cache
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\ref\SaleTicketProject.dll
+C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.sourcelink.json
