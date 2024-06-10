@@ -1,4 +1,5 @@
 using DataAccessLayers;
+using DataAccessLayers.UnitOfWork;
 using Repositories.IRepository;
 using Repositories.Repository;
 
@@ -19,7 +20,7 @@ builder.Services.AddScoped<TransactionHistoryDAO>();
 builder.Services.AddScoped<TransactionTypeDAO>();
 
 //UnitOfWork
-//builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 //Repository
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
