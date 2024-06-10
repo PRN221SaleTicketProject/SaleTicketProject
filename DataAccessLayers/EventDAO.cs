@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayers
 {
-    public class EventDAO(Prn221projectContext context) : GenericDAO<Event>(context)
+    public class EventDAO : GenericDAO<Event>
     {
     }
 }

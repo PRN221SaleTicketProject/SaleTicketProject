@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayers
 {
-    public class TicketDAO(Prn221projectContext context) : GenericDAO<Ticket>(context)
+    public class TicketDAO : GenericDAO<Ticket>
     {
     }
 }

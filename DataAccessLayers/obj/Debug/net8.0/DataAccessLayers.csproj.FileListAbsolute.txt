@@ -8,6 +8,7 @@ C:\Users\Dell\Desktop\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAc
 C:\Users\Dell\Desktop\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.AssemblyInfoInputs.cache
 C:\Users\Dell\Desktop\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.AssemblyInfo.cs
 C:\Users\Dell\Desktop\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.sourcelink.json
 C:\Users\Dell\Desktop\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAcce.353F41F5.Up2Date
 C:\Users\Dell\Desktop\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.dll
 C:\Users\Dell\Desktop\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\refint\DataAccessLayers.dll

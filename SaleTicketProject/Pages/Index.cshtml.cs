@@ -11,6 +11,7 @@ namespace SaleTicketProject.Pages
         private readonly IAccountRepository _accountRepository;
 
         public List<Account> Accounts = new List<Account>();
+        public List<Account> Accounts2 = new List<Account>();
         public IndexModel(ILogger<IndexModel> logger, IAccountRepository accountRepository)
         {
             _accountRepository = accountRepository;
@@ -20,6 +21,7 @@ namespace SaleTicketProject.Pages
         public void OnGet()
         {
             Accounts = _accountRepository.GetAll().ToList();
+            Accounts2 = _accountRepository.GetAllName();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayers
 {
-    public class RoleDAO(Prn221projectContext context) : GenericDAO<Role>(context)
+    public class RoleDAO : GenericDAO<Role>
     {
     }
 }

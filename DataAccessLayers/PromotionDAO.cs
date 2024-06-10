@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayers
 {
-    public class PromotionDAO(Prn221projectContext context) : GenericDAO<Promotion>(context)
+    public class PromotionDAO : GenericDAO<Promotion>
     {
     }
 }

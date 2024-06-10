@@ -9,5 +9,6 @@ namespace Repositories.IRepository
 {
     public interface IAccountRepository : IGenericRepository<Account>
     {
+        List<Account> GetAllName();
     }
 }

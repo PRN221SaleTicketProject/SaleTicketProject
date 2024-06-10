@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayers
 {
-    public class CategoryDAO(Prn221projectContext context) : GenericDAO<Category>(context)
+    public class CategoryDAO : GenericDAO<Category>
     {
     }
 }

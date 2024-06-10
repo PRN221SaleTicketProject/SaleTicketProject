@@ -12,10 +12,17 @@ namespace Repositories.Repository
     public class AccountRepository : GenericRepository<Account>, IAccountRepository
     {
         private readonly GenericDAO<Account> _accountDAO;
+        private readonly AccountDAO _accountDAOHigher;//example nang cao code
 
-        public AccountRepository(GenericDAO<Account> accountDAO) : base(accountDAO)
+        public AccountRepository(GenericDAO<Account> accountDAO, AccountDAO accountDAOHigher) : base(accountDAO)
         {
             _accountDAO = accountDAO;
+            _accountDAOHigher = accountDAOHigher;
+        }
+
+        public List<Account> GetAllName()//vi du service nang cao
+        {
+            return _accountDAOHigher.GetAllName();
         }
     }
 }

@@ -1,16 +1,10 @@
-using BusinessObjects;
 using DataAccessLayers;
-using DataAccessLayers.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
 using Repositories.IRepository;
 using Repositories.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //Database
-builder.Services.AddDbContext<Prn221projectContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 //DAO
 builder.Services.AddScoped<AccountDAO>();
 builder.Services.AddScoped<CategoryDAO>();
@@ -25,7 +19,7 @@ builder.Services.AddScoped<TransactionHistoryDAO>();
 builder.Services.AddScoped<TransactionTypeDAO>();
 
 //UnitOfWork
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+//builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 //Repository
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();

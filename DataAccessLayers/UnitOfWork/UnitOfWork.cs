@@ -10,9 +10,9 @@ namespace DataAccessLayers.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         private Prn221projectContext _projectContext;
-        public UnitOfWork(Prn221projectContext context)
+        public UnitOfWork()
         {
-            _projectContext = context;
+            _projectContext = new Prn221projectContext();
         }
 
         private GenericDAO<Account> accountDAO;
@@ -22,7 +22,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (accountDAO == null)
                 {
-                    accountDAO = new AccountDAO(_projectContext);
+                    accountDAO = new AccountDAO();
                 }
 
                 return accountDAO;
@@ -36,7 +36,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (categoryDAO == null)
                 {
-                    categoryDAO = new CategoryDAO(_projectContext);
+                    categoryDAO = new CategoryDAO();
                 }
 
                 return categoryDAO;
@@ -50,7 +50,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (eventDAO == null)
                 {
-                    eventDAO = new EventDAO(_projectContext);
+                    eventDAO = new EventDAO();
                 }
 
                 return eventDAO;
@@ -64,7 +64,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (promotionDAO == null)
                 {
-                    promotionDAO = new PromotionDAO(_projectContext);
+                    promotionDAO = new PromotionDAO();
                 }
 
                 return promotionDAO;
@@ -78,7 +78,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (roleDAO == null)
                 {
-                    roleDAO = new RoleDAO(_projectContext);
+                    roleDAO = new RoleDAO();
                 }
 
                 return roleDAO;
@@ -92,7 +92,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (solvedTicketDAO == null)
                 {
-                    solvedTicketDAO = new SolvedTicketDAO(_projectContext);
+                    solvedTicketDAO = new SolvedTicketDAO();
                 }
 
                 return solvedTicketDAO;
@@ -106,7 +106,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (ticketDAO == null)
                 {
-                    ticketDAO = new TicketDAO(_projectContext);
+                    ticketDAO = new TicketDAO();
                 }
 
                 return ticketDAO;
@@ -120,7 +120,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (transactionDAO == null)
                 {
-                    transactionDAO = new TransactionDAO(_projectContext);
+                    transactionDAO = new TransactionDAO();
                 }
 
                 return transactionDAO;
@@ -134,7 +134,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (transactionHistoryDAO == null)
                 {
-                    transactionHistoryDAO = new TransactionHistoryDAO(_projectContext);
+                    transactionHistoryDAO = new TransactionHistoryDAO();
                 }
 
                 return transactionHistoryDAO;
@@ -148,7 +148,7 @@ namespace DataAccessLayers.UnitOfWork
             {
                 if (transactionTypeDAO == null)
                 {
-                    transactionTypeDAO = new TransactionTypeDAO(_projectContext);
+                    transactionTypeDAO = new TransactionTypeDAO();
                 }
 
                 return transactionTypeDAO;

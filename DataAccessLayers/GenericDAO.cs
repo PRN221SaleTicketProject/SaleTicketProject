@@ -9,9 +9,13 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayers
 {
-    public class GenericDAO<T>(Prn221projectContext context) where T : class
+    public class GenericDAO<T> where T : class
     {
-        private readonly Prn221projectContext _context = context;
+        protected readonly Prn221projectContext _context;
+        public GenericDAO()
+        {
+            _context = new Prn221projectContext();
+        }
 
         public T? GetById(int id)
         {

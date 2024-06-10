@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayers
 {
-    public class TransactionTypeDAO(Prn221projectContext context) : GenericDAO<TransactionType>(context)
+    public class TransactionTypeDAO : GenericDAO<TransactionType>
     {
     }
 }

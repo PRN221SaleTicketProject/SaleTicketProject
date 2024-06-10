@@ -30,4 +30,20 @@
             }
         </tbody>
     </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var article2 in Model.Accounts2)
+            {
+                <tr>
+                    <td>@article2.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

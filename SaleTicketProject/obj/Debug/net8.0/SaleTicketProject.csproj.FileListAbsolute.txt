@@ -58,6 +58,7 @@ C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleT
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.RazorAssemblyInfo.cache
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.RazorAssemblyInfo.cs
+C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.sourcelink.json
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\staticwebassets\msbuild.SaleTicketProject.Microsoft.AspNetCore.StaticWebAssets.props
@@ -74,4 +75,3 @@ C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\refin
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.pdb
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.genruntimeconfig.cache
 C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\ref\SaleTicketProject.dll
-C:\Users\Dell\Desktop\SaleTicketProject\SaleTicketProject\obj\Debug\net8.0\SaleTicketProject.sourcelink.json
