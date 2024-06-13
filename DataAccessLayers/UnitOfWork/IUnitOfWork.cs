@@ -9,16 +9,16 @@ namespace DataAccessLayers.UnitOfWork
 {
     public interface IUnitOfWork
     {
-        public GenericDAO<Account> AccountDAO { get; }
-        public GenericDAO<Category> CategoryDAO { get; }
-        public GenericDAO<Event> EventDAO { get; }
-        public GenericDAO<Promotion> PromotionDAO { get; }
-        public GenericDAO<Role> RoleDAO { get; }
-        public GenericDAO<SolvedTicket> SolvedTicketDAO { get; }
-        public GenericDAO<Ticket> TicketDAO { get; }
-        public GenericDAO<Transaction> TransactionDAO { get; }
-        public GenericDAO<TransactionHistory> TransactionHistoryDAO { get; }
-        public GenericDAO<TransactionTypeDAO> TransactionTypeDAO { get; }
+        public AccountDAO AccountDAO { get; }
+        public CategoryDAO CategoryDAO { get; }
+        public EventDAO EventDAO { get; }
+        public PromotionDAO PromotionDAO { get; }
+        public RoleDAO RoleDAO { get; }
+        public SolvedTicketDAO SolvedTicketDAO { get; }
+        public TicketDAO TicketDAO { get; }
+        public TransactionDAO TransactionDAO { get; }
+        public TransactionHistoryDAO TransactionHistoryDAO { get; }
+        public TransactionTypeDAO TransactionTypeDAO { get; }
         void SaveChanges();
 
     }

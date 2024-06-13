@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|c:\\users\\dell\\desktop\\saleticketproject\\repositories\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|solutionrelative:repositories\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|c:\\users\\dell\\desktop\\saleticketproject\\repositories\\repository\\solvedticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|solutionrelative:repositories\\repository\\solvedticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|c:\\users\\dell\\desktop\\saleticketproject\\repositories\\irepository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|solutionrelative:repositories\\irepository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|c:\\users\\dell\\desktop\\saleticketproject\\repositories\\repository\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|solutionrelative:repositories\\repository\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061A0492-2D45-468D-B15E-F4919552439C}|DataAccessLayers\\DataAccessLayers.csproj|c:\\users\\dell\\desktop\\saleticketproject\\dataaccesslayers\\prn221projectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061A0492-2D45-468D-B15E-F4919552439C}|DataAccessLayers\\DataAccessLayers.csproj|solutionrelative:dataaccesslayers\\prn221projectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|c:\\users\\dell\\desktop\\saleticketproject\\saleticketproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061A0492-2D45-468D-B15E-F4919552439C}|DataAccessLayers\\DataAccessLayers.csproj|c:\\users\\dell\\desktop\\saleticketproject\\dataaccesslayers\\genericdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061A0492-2D45-468D-B15E-F4919552439C}|DataAccessLayers\\DataAccessLayers.csproj|solutionrelative:dataaccesslayers\\genericdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 26,
+          "SelectedChildIndex": 28,
           "Children": [
             {
               "$type": "Bookmark",
@@ -123,27 +135,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\Repositories\\IRepository\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IRepository\\IGenericRepository.cs",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\Repositories\\IRepository\\IGenericRepository.cs",
-              "RelativeToolTip": "Repositories\\IRepository\\IGenericRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAcAAAA",
+              "Title": "TicketRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\Repositories\\Repository\\TicketRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Repository\\TicketRepository.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\Repositories\\Repository\\TicketRepository.cs",
+              "RelativeToolTip": "Repositories\\Repository\\TicketRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T11:36:13.35Z",
+              "WhenOpened": "2024-06-13T16:08:57.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Prn221projectContext.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\DataAccessLayers\\Prn221projectContext.cs",
+              "RelativeDocumentMoniker": "DataAccessLayers\\Prn221projectContext.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\DataAccessLayers\\Prn221projectContext.cs",
+              "RelativeToolTip": "DataAccessLayers\\Prn221projectContext.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAA+wC0AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:08:24.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\appsettings.json",
+              "RelativeDocumentMoniker": "SaleTicketProject\\appsettings.json",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\appsettings.json",
+              "RelativeToolTip": "SaleTicketProject\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-13T16:06:30.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\Repositories\\Repository\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Repository\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\Repositories\\Repository\\GenericRepository.cs",
-              "RelativeToolTip": "Repositories\\Repository\\GenericRepository.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAA+AAAA",
+              "Title": "SolvedTicketRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\Repositories\\Repository\\SolvedTicketRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Repository\\SolvedTicketRepository.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\Repositories\\Repository\\SolvedTicketRepository.cs",
+              "RelativeToolTip": "Repositories\\Repository\\SolvedTicketRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T11:36:06.821Z",
+              "WhenOpened": "2024-06-13T15:41:19.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GenericDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\DataAccessLayers\\GenericDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayers\\GenericDAO.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\DataAccessLayers\\GenericDAO.cs",
+              "RelativeToolTip": "DataAccessLayers\\GenericDAO.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAwwG0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T15:13:51.877Z",
               "EditorCaption": ""
             }
           ]

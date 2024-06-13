@@ -13,6 +13,8 @@ public partial class Ticket
 
     public byte? Status { get; set; }
 
+    public int? Quantity { get; set; }
+
     public virtual Event? Event { get; set; }
 
     public virtual ICollection<SolvedTicket> SolvedTickets { get; set; } = new List<SolvedTicket>();

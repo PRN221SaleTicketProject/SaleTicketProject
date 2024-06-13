@@ -15,8 +15,8 @@ namespace DataAccessLayers.UnitOfWork
             _projectContext = new Prn221projectContext();
         }
 
-        private GenericDAO<Account> accountDAO;
-        public GenericDAO<Account> AccountDAO
+        private AccountDAO accountDAO;
+        public AccountDAO AccountDAO
         {
             get
             {
@@ -29,8 +29,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<Category> categoryDAO;
-        public GenericDAO<Category> CategoryDAO
+        private CategoryDAO categoryDAO;
+        public CategoryDAO CategoryDAO
         {
             get
             {
@@ -43,8 +43,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<Event> eventDAO;
-        public GenericDAO<Event> EventDAO
+        private EventDAO eventDAO;
+        public EventDAO EventDAO
         {
             get
             {
@@ -57,8 +57,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<Promotion> promotionDAO;
-        public GenericDAO<Promotion> PromotionDAO
+        private PromotionDAO promotionDAO;
+        public PromotionDAO PromotionDAO
         {
             get
             {
@@ -71,8 +71,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<Role> roleDAO;
-        public GenericDAO<Role> RoleDAO
+        private RoleDAO roleDAO;
+        public RoleDAO RoleDAO
         {
             get
             {
@@ -85,8 +85,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<SolvedTicket> solvedTicketDAO;
-        public GenericDAO<SolvedTicket> SolvedTicketDAO
+        private SolvedTicketDAO solvedTicketDAO;
+        public SolvedTicketDAO SolvedTicketDAO
         {
             get
             {
@@ -99,8 +99,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<Ticket> ticketDAO;
-        public GenericDAO<Ticket> TicketDAO
+        private TicketDAO ticketDAO;
+        public TicketDAO TicketDAO
         {
             get
             {
@@ -113,8 +113,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<Transaction> transactionDAO;
-        public GenericDAO<Transaction> TransactionDAO
+        private TransactionDAO transactionDAO;
+        public TransactionDAO TransactionDAO
         {
             get
             {
@@ -127,8 +127,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<TransactionHistory> transactionHistoryDAO;
-        public GenericDAO<TransactionHistory> TransactionHistoryDAO
+        private TransactionHistoryDAO transactionHistoryDAO;
+        public TransactionHistoryDAO TransactionHistoryDAO
         {
             get
             {
@@ -141,8 +141,8 @@ namespace DataAccessLayers.UnitOfWork
             }
         }
 
-        private GenericDAO<TransactionTypeDAO> transactionTypeDAO;
-        public GenericDAO<TransactionTypeDAO> TransactionTypeDAO
+        private TransactionTypeDAO transactionTypeDAO;
+        public TransactionTypeDAO TransactionTypeDAO
         {
             get
             {
