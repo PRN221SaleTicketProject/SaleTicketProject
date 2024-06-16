@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HeN7FlB6KDoeM5ky9/5lpJLWHDm7saBF4K0A1j5SoBE=",
+  "Hash": "wVXdIX8lZsrEUGNVK2+sXgepQJrlvTVlu2wycVDpXh8=",
   "Source": "SaleTicketProject",
   "BasePath": "_content/SaleTicketProject",
   "Mode": "Default",
@@ -207,12 +207,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-01.jpg",
+      "Identity": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\BACKGROUND-2-1536x864.jpg",
       "SourceId": "SaleTicketProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\",
       "BasePath": "_content/SaleTicketProject",
-      "RelativePath": "images/banner-01.jpg",
+      "RelativePath": "images/BACKGROUND-2-1536x864.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,15 +223,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\banner-01.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\BACKGROUND-2-1536x864.jpg"
     },
     {
-      "Identity": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-02.jpg",
+      "Identity": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\background-seminar-2-1536x864.png",
       "SourceId": "SaleTicketProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\",
       "BasePath": "_content/SaleTicketProject",
-      "RelativePath": "images/banner-02.jpg",
+      "RelativePath": "images/background-seminar-2-1536x864.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -242,26 +242,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\banner-02.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-03.jpg",
-      "SourceId": "SaleTicketProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\",
-      "BasePath": "_content/SaleTicketProject",
-      "RelativePath": "images/banner-03.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\banner-03.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\background-seminar-2-1536x864.png"
     },
     {
       "Identity": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\contact-bg.jpg",
@@ -680,6 +661,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\video-frame.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\z5503022738195_d1b10dc2403639d30987d5083ee2d253.jpg",
+      "SourceId": "SaleTicketProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\",
+      "BasePath": "_content/SaleTicketProject",
+      "RelativePath": "images/z5503022738195_d1b10dc2403639d30987d5083ee2d253.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\z5503022738195_d1b10dc2403639d30987d5083ee2d253.jpg"
     },
     {
       "Identity": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\bootstrap.min.js",

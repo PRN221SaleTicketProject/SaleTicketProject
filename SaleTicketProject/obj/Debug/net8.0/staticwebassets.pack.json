@@ -37,16 +37,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-01.jpg",
-      "PackagePath": "staticwebassets\\images\\banner-01.jpg"
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\BACKGROUND-2-1536x864.jpg",
+      "PackagePath": "staticwebassets\\images\\BACKGROUND-2-1536x864.jpg"
     },
     {
-      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-02.jpg",
-      "PackagePath": "staticwebassets\\images\\banner-02.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-03.jpg",
-      "PackagePath": "staticwebassets\\images\\banner-03.jpg"
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\background-seminar-2-1536x864.png",
+      "PackagePath": "staticwebassets\\images\\background-seminar-2-1536x864.png"
     },
     {
       "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\contact-bg.jpg",
@@ -135,6 +131,10 @@
     {
       "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\video-frame.jpg",
       "PackagePath": "staticwebassets\\images\\video-frame.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\z5503022738195_d1b10dc2403639d30987d5083ee2d253.jpg",
+      "PackagePath": "staticwebassets\\images\\z5503022738195_d1b10dc2403639d30987d5083ee2d253.jpg"
     },
     {
       "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\bootstrap.min.js",

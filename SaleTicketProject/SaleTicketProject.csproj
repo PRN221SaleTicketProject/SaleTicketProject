@@ -8,9 +8,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\css\bootstrap.min.css" />
-    <None Include="wwwroot\images\banner-01.jpg" />
-    <None Include="wwwroot\images\banner-02.jpg" />
-    <None Include="wwwroot\images\banner-03.jpg" />
     <None Include="wwwroot\images\contact-bg.jpg" />
     <None Include="wwwroot\images\deal-01.jpg" />
     <None Include="wwwroot\images\deal-02.jpg" />

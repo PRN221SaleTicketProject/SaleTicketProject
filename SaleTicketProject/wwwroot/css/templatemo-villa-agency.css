@@ -745,15 +745,15 @@ Banner Style
 }
 
 .main-banner .item-1 {
-  background-image: url(../images/banner-01.jpg);
+  background-image: url(../images/BACKGROUND-2-1536x864.jpg);
 }
 
 .main-banner .item-2 {
-  background-image: url(../images/banner-02.jpg);
+  background-image: url(../images/background-seminar-2-1536x864.png);
 }
 
 .main-banner .item-3 {
-  background-image: url(../images/banner-03.jpg);
+    background-image: url(https://qhdn-hcmuni.fpt.edu.vn/wp-content/uploads/2024/06/2-Training-And-Development-1536x864.jpg);
 }
 
 .main-banner .item span.category {
@@ -958,12 +958,12 @@ Video Style
 */
 
 .video {
-  background-image: url(../images/video-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  padding: 100px 0px 250px 0px;
-  position: relative;
+    background-image: url(https://media.vneconomy.vn/w800/images/upload/2023/05/31/1-hoi-thao-tang-truong-kinh-doanh-voi-bo-giai-phap-sap-s-4hana-public-cloud-duoc-fpt-is-va-sap-phoi-hop-to-chuc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0px 250px 0px;
+    position: relative;
 }
 
 .video-content {
