@@ -5,12 +5,180 @@
       "PackagePath": "staticwebassets\\SaleTicketProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\css\\flex-slider.css",
+      "PackagePath": "staticwebassets\\css\\flex-slider.css"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\css\\owl.css",
+      "PackagePath": "staticwebassets\\css\\owl.css"
+    },
+    {
       "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\css\\templatemo-villa-agency.css",
+      "PackagePath": "staticwebassets\\css\\templatemo-villa-agency.css"
+    },
+    {
       "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-01.jpg",
+      "PackagePath": "staticwebassets\\images\\banner-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-02.jpg",
+      "PackagePath": "staticwebassets\\images\\banner-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\banner-03.jpg",
+      "PackagePath": "staticwebassets\\images\\banner-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\contact-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\contact-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\deal-01.jpg",
+      "PackagePath": "staticwebassets\\images\\deal-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\deal-02.jpg",
+      "PackagePath": "staticwebassets\\images\\deal-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\deal-03.jpg",
+      "PackagePath": "staticwebassets\\images\\deal-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\email-icon.png",
+      "PackagePath": "staticwebassets\\images\\email-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\featured-icon.png",
+      "PackagePath": "staticwebassets\\images\\featured-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\featured.jpg",
+      "PackagePath": "staticwebassets\\images\\featured.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\info-icon-01.png",
+      "PackagePath": "staticwebassets\\images\\info-icon-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\info-icon-02.png",
+      "PackagePath": "staticwebassets\\images\\info-icon-02.png"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\info-icon-03.png",
+      "PackagePath": "staticwebassets\\images\\info-icon-03.png"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\info-icon-04.png",
+      "PackagePath": "staticwebassets\\images\\info-icon-04.png"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\page-heading-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\page-heading-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\phone-icon.png",
+      "PackagePath": "staticwebassets\\images\\phone-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\property-01.jpg",
+      "PackagePath": "staticwebassets\\images\\property-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\property-02.jpg",
+      "PackagePath": "staticwebassets\\images\\property-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\property-03.jpg",
+      "PackagePath": "staticwebassets\\images\\property-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\property-04.jpg",
+      "PackagePath": "staticwebassets\\images\\property-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\property-05.jpg",
+      "PackagePath": "staticwebassets\\images\\property-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\property-06.jpg",
+      "PackagePath": "staticwebassets\\images\\property-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\single-property.jpg",
+      "PackagePath": "staticwebassets\\images\\single-property.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\video-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\video-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\images\\video-frame.jpg",
+      "PackagePath": "staticwebassets\\images\\video-frame.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\counter.js",
+      "PackagePath": "staticwebassets\\js\\counter.js"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\isotope.min.js",
+      "PackagePath": "staticwebassets\\js\\isotope.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\jquery.min.map",
+      "PackagePath": "staticwebassets\\js\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\js\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\js\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\owl-carousel.js",
+      "PackagePath": "staticwebassets\\js\\owl-carousel.js"
     },
     {
       "Id": "C:\\Users\\Dell\\Desktop\\SaleTicketProject\\SaleTicketProject\\wwwroot\\js\\site.js",
