@@ -1,5 +1,6 @@
 ﻿using BusinessObjects;
 using DataAccessLayers;
+using DataAccessLayers.UnitOfWork;
 using Repositories.IRepository;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,17 @@ namespace Repositories.Repository
     public class TransactionHIstoryRepository : GenericRepository<TransactionHistory>, ITransactionHistoryRepository
     {
         private readonly GenericDAO<TransactionHistory> _transactionHistoryDAO;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public TransactionHIstoryRepository(GenericDAO<TransactionHistory> transactionHistoryDAO) : base(transactionHistoryDAO)
+        public TransactionHIstoryRepository(GenericDAO<TransactionHistory> transactionHistoryDAO, IUnitOfWork unitOfWork) : base(transactionHistoryDAO)
         {
             _transactionHistoryDAO = transactionHistoryDAO;
+            _unitOfWork = unitOfWork;
+        }
+
+        public List<TransactionHistory> GetTransactionHistoryByAccountId(int accountId)
+        {
+            return _unitOfWork.TransactionHistoryDAO.Find(a => a.Transaction!.SolvedTicket!.AccountId == accountId).ToList();
         }
     }
 }

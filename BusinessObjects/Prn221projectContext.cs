@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace BusinessObjects;
 
@@ -37,14 +36,9 @@ public partial class Prn221projectContext : DbContext
     public virtual DbSet<TransactionType> TransactionTypes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer(GetConnectionString());    
-    private string? GetConnectionString()
-{
-    IConfiguration configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", true, true).Build();
-    return configuration["ConnectionStrings:DB"];
-}
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=PRN221Project;TrustServerCertificate=True");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
@@ -59,8 +53,14 @@ public partial class Prn221projectContext : DbContext
             entity.Property(e => e.Address)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            entity.Property(e => e.Email)
+                .HasMaxLength(255)
+                .IsUnicode(false);
             entity.Property(e => e.Name)
                 .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.Password)
+                .HasMaxLength(255)
                 .IsUnicode(false);
             entity.Property(e => e.Phone)
                 .HasMaxLength(15)

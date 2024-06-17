@@ -27,5 +27,10 @@ namespace Repositories.Repository
             var currentTicket = _unitOfWork.TicketDAO.GetRemainingTicketsForEvent(eventName.Id);
             return _ = quantity - currentTicket;
         }
+
+        public List<Ticket> GetByEventId(int eventId)
+        {
+           return _unitOfWork.TicketDAO.Find(a => a.EventId == eventId).ToList();
+        } 
     }
 }

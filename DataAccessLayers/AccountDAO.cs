@@ -16,5 +16,10 @@ namespace DataAccessLayers
         {
             return _context.Set<Account>().ToList();
         }
+
+        public Account? GetSystemAccountByAccountEmailAndPassword(string accountEmail, string password)
+        {
+            return _context.Accounts.SingleOrDefault(m => m.Email == accountEmail && m.Password == password);
+        }
     }
 }

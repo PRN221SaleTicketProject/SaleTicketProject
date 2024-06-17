@@ -9,5 +9,6 @@ namespace Repositories.IRepository
 {
     public interface IPromotionRepository : IGenericRepository<Promotion>
     {
+        Promotion CheckDiscount(int? quantity);
     }
 }

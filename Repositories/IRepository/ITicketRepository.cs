@@ -9,5 +9,7 @@ namespace Repositories.IRepository
 {
     public interface ITicketRepository : IGenericRepository<Ticket>
     {
+        int? CountQuantityPeopleJoinEvent(Event eventName);
+        List<Ticket> GetByEventId(int eventId);
     }
 }

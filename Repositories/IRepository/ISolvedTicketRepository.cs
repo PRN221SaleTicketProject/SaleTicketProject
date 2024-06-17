@@ -9,5 +9,7 @@ namespace Repositories.IRepository
 {
     public interface ISolvedTicketRepository : IGenericRepository<SolvedTicket>
     {
+        void PurchaseTickets(List<Ticket> tickets, Account account, TransactionType type);
+        List<SolvedTicket> GetSolvedTicketsByAccountId(int accountId);
     }
 }

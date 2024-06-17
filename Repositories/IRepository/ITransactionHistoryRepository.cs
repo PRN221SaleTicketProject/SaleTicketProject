@@ -9,5 +9,6 @@ namespace Repositories.IRepository
 {
     public interface ITransactionHistoryRepository : IGenericRepository<TransactionHistory>
     {
+        List<TransactionHistory> GetTransactionHistoryByAccountId(int accountId);
     }
 }
