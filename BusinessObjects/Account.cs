@@ -21,6 +21,8 @@ public partial class Account
 
     public string? Email { get; set; }
 
+    public double? Wallet { get; set; }
+
     public virtual Role? Role { get; set; }
 
     public virtual ICollection<SolvedTicket> SolvedTickets { get; set; } = new List<SolvedTicket>();

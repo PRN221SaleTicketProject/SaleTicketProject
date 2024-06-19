@@ -10,21 +10,22 @@ namespace SaleTicketProject.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly IAccountRepository _accountRepository;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IEventCategory _eventRepository;
 
-        public List<Account> Accounts = new List<Account>();
+        public Account Account = new Account();
         public List<Account> Accounts2 = new List<Account>();
-        public IndexModel(ILogger<IndexModel> logger, IAccountRepository accountRepository, IUnitOfWork unitOfWork)
+        public List<Event> Events = new List<Event>();
+        public IndexModel(ILogger<IndexModel> logger, IAccountRepository accountRepository, IEventCategory eventRepository)
         {
             _accountRepository = accountRepository;
             _logger = logger;
-            _unitOfWork = unitOfWork;
+            _eventRepository = eventRepository;
         }
 
-        public void OnGet()
+        public void OnGet(int ID)
         {
-            Accounts = _unitOfWork.AccountDAO.GetAll().ToList();
-            Accounts2 = _accountRepository.GetAllName();
+            Account = _accountRepository.GetById(ID)!;
+            Events = _eventRepository.GetAll().ToList();
         }
     }
 }

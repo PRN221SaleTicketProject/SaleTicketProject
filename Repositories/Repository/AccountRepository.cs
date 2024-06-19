@@ -31,13 +31,13 @@ namespace Repositories.Repository
 
         public void MinusDebt(int? quantity, int? prize, double? discount, Account account)
         {
-            int? accountPay = 0;
-            if (quantity < 10) accountPay = int.Parse(account.Address!) - prize * quantity;
-            else accountPay = int.Parse(account.Address!) - (int?)((double)prize! * (double)quantity - (double)prize * (double)quantity * discount);
+            double? accountPay = 0;
+            if (quantity < 10) accountPay = account.Wallet! - (double)prize! * (double)quantity;
+            else accountPay = account.Wallet! - ((double)prize! * (double)quantity! - (double)prize * (double)quantity * discount);
 
             if (accountPay >= 0)
             {
-                account.Address = (accountPay).ToString();
+                account.Wallet = accountPay;
                 _unitOfWork.AccountDAO.Update(account);
                 _unitOfWork.SaveChanges();
             }

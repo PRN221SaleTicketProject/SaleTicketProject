@@ -39,8 +39,8 @@ namespace Repositories.Repository
                 if (databaseTicket.Quantity > 0)
                 {
                     if (ticket.Status == 0) continue;
-                    if (ticket.Quantity * databaseTicket.Price > int.Parse(account.Address!)) throw new Exception("YOUR PRICE IN ACCOUNT NOT ENOUGH");
-                    if (ticket.Quantity * databaseTicket.Price < int.Parse(account.Address!)) 
+                    if ((double)ticket.Quantity! * (double)databaseTicket.Price! > account.Wallet) throw new Exception("YOUR PRICE IN ACCOUNT NOT ENOUGH");
+                    if ((double)ticket.Quantity * (double)databaseTicket.Price <= account.Wallet) 
                         _accountRepository.MinusDebt(ticket.Quantity, databaseTicket.Price, promotion.Discount, account);
 
                     databaseTicket.Quantity = databaseTicket.Quantity - ticket.Quantity;
