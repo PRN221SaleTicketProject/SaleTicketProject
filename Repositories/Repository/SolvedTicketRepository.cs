@@ -26,32 +26,32 @@ namespace Repositories.Repository
             _accountRepository = accountRepository;
         }
 
-        public void PurchaseTickets(List<Ticket> tickets, Account account, TransactionType type)//promotion, quantity of ticket, transaction - transaction hítory
+        public void PurchaseTickets(List<Ticket> tickets, Account account, int quantity)//promotion, quantity of ticket, transaction - transaction hítory
         {
 
             foreach (var ticket in tickets)
             {
                 var promotion = new Promotion();
-                promotion = _promotionRepository.CheckDiscount(ticket.Quantity);
+                promotion = _promotionRepository.CheckDiscount(quantity);
 
                 var databaseTicket = _unitOfWork.TicketDAO.GetById(ticket.Id);
                 if (databaseTicket == null) throw new Exception("NOT FOUND!");
                 if (databaseTicket.Quantity > 0)
                 {
                     if (ticket.Status == 0) continue;
-                    if ((double)ticket.Quantity! * (double)databaseTicket.Price! > account.Wallet) throw new Exception("YOUR PRICE IN ACCOUNT NOT ENOUGH");
-                    if ((double)ticket.Quantity * (double)databaseTicket.Price <= account.Wallet) 
-                        _accountRepository.MinusDebt(ticket.Quantity, databaseTicket.Price, promotion.Discount, account);
+                    if ((double)quantity! * (double)databaseTicket.Price! > account.Wallet) throw new Exception("YOUR PRICE IN ACCOUNT NOT ENOUGH");
+                    if ((double)quantity * (double)databaseTicket.Price <= account.Wallet) 
+                        _accountRepository.MinusDebt(quantity, databaseTicket.Price, promotion.Discount, account);
 
-                    databaseTicket.Quantity = databaseTicket.Quantity - ticket.Quantity;
+                    databaseTicket.Quantity = databaseTicket.Quantity - quantity;
                     if (databaseTicket.Quantity == 0) databaseTicket.Status = 0;
 
                     var solvedTicket = new SolvedTicket
                     {
                         AccountId = account.Id,
                         TicketId = ticket.Id,
-                        Quantity = ticket.Quantity,
-                        TotalPrice = (int?)((double)databaseTicket.Price! * (double)ticket.Quantity! - (double)databaseTicket.Price * (double)ticket.Quantity * promotion!.Discount),
+                        Quantity = quantity,
+                        TotalPrice = (int?)((double)databaseTicket.Price! * (double)quantity! - (double)databaseTicket.Price * (double)quantity * promotion!.Discount),
                         PromotionId = promotion!.Id,
                     };
                     var yourSolvedTicket = _unitOfWork.SolvedTicketDAO.Add(solvedTicket);
@@ -62,7 +62,7 @@ namespace Repositories.Repository
                     {
                         EventId = databaseTicket.EventId,
                         SolvedTicketId = yourSolvedTicket.Id,
-                        TypeId = type.Id,
+                        TypeId = 1,
                         Status = "Completed"
                     };
                     _unitOfWork.TransactionDAO.Add(transaction);

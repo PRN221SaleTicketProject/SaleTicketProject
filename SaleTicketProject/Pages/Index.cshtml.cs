@@ -12,8 +12,8 @@ namespace SaleTicketProject.Pages
         private readonly IAccountRepository _accountRepository;
         private readonly IEventCategory _eventRepository;
 
-        public Account Account = new Account();
-        public List<Account> Accounts2 = new List<Account>();
+        [BindProperty]
+        public Account Account { get; set; }
         public List<Event> Events = new List<Event>();
         public IndexModel(ILogger<IndexModel> logger, IAccountRepository accountRepository, IEventCategory eventRepository)
         {
@@ -26,6 +26,13 @@ namespace SaleTicketProject.Pages
         {
             Account = _accountRepository.GetById(ID)!;
             Events = _eventRepository.GetAll().ToList();
+        }
+        [BindProperty]
+        public int Id { get; set; }
+
+        public IActionResult OnPostProperty()
+        {
+            return RedirectToPage("Property-details",new { Id = Id, accountId = Account.Id});
         }
     }
 }

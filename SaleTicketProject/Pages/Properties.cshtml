@@ -12,8 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Villa Agency - Property Listing by TemplateMo</title>
-
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -83,7 +81,7 @@
                         <ul class="nav">
                             <li><a asp-page="/Index">Home</a></li>
                             <li><a asp-page="/Properties" class="active">Properties</a></li>
-                            <li><a asp-page="/Property-details">Property Details</a></li>
+                            @*                            <li><a asp-page="/Property-details">Property Details</a></li> *@
                             <li><a asp-page="/Contact">Contact Us</a></li>
                             <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
                         </ul>
@@ -111,41 +109,51 @@
 
     <div class="section properties" style="padding-bottom: 100px">
         <div class="container">
-@*             <ul class="properties-filter">
-                <li>
-                    <a class="is_active" href="#!" data-filter="*">Show All</a>
-                </li>
-                <li>
-                    <a href="#!" data-filter=".adv">Apartment</a>
-                </li>
-                <li>
-                    <a href="#!" data-filter=".str">Villa House</a>
-                </li>
-                <li>
-                    <a href="#!" data-filter=".rac">Penthouse</a>
-                </li>
+            @*             <ul class="properties-filter">
+            <li>
+            <a class="is_active" href="#!" data-filter="*">Show All</a>
+            </li>
+            <li>
+            <a href="#!" data-filter=".adv">Apartment</a>
+            </li>
+            <li>
+            <a href="#!" data-filter=".str">Villa House</a>
+            </li>
+            <li>
+            <a href="#!" data-filter=".rac">Penthouse</a>
+            </li>
             </ul> *@
             <div class="row properties-box">
-                                @foreach (var article in Model.Events)
+                @foreach (var article in Model.Events)
                 {
                     <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
                         <div class="item">
-                            <a asp-page="/Property-details"><img src="https://daihoc.fpt.edu.vn/wp-content/uploads/2023/05/FPTU_seminarSHTT.webp" alt=""></a>
-                            <span class="category">@article.Name</span>
-                            <h6>@article.TicketQuantity</h6>
-                            <h4><a asp-page="/Property-details">@article.Location</a></h4>
-                            <ul>
-                                <li>Date Start <span>@article.DateStart</span></li>
-                                <li>Date End <span>@article.DateEnd</span></li>
-                                <li>Category <span>@article.CategoryId</span></li>
-                            </ul>
-                            <div class="main-button">
-                                <a asp-page="/Property-details">Schedule a visit</a>
-                            </div>
+                            <form method="post">
+                                @if (Model.Account != null)
+                                {
+                                    <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
+                                }
+                                <input type="hidden" asp-for="Id" value="@article.Id" />
+                                <a asp-page="/Property-details"><img src="https://daihoc.fpt.edu.vn/wp-content/uploads/2023/05/FPTU_seminarSHTT.webp" alt=""></a>
+                                <span class="category">@article.Name</span>
+                                <h6>@article.TicketQuantity</h6>
+                                <h4><a asp-page="/Property-details">@article.Location</a></h4>
+                                <ul>
+                                    <li>Date Start <span>@article.DateStart</span></li>
+                                    <li>Date End <span>@article.DateEnd</span></li>
+                                    <li>Category <span>@article.CategoryId</span></li>
+                                </ul>
+@*                                 <div >
+                                    <a asp-page="/Property-details">Schedule a visit</a>
+                                </div> *@
+                                <div class="main-button">
+                                    <button type="submit" asp-page-handler="Property" style="border: none"><a style="color: white">Schedule a visit</a></button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 }
-            
+
             </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -160,16 +168,16 @@
         </div>
     </div>
 
-@*     <footer>
-        <div class="container">
-            <div class="col-lg-12">
-                <p>
-                    Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
+    @*     <footer>
+    <div class="container">
+    <div class="col-lg-12">
+    <p>
+    Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
 
-                    Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
-                </p>
-            </div>
-        </div>
+    Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
+    </p>
+    </div>
+    </div>
     </footer> *@
 
     <!-- Scripts -->
