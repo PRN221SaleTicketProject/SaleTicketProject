@@ -82,11 +82,28 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a asp-page="/Index">Home</a></li>
-                            <li><a asp-page="/Properties">Properties</a></li>
-                            <li><a asp-page="/Property-details" class="active">Property Details</a></li>
+                            <form method="post">
+                                @if (Model.Account != null)
+                                {
+                                    <input type="hidden" asp-for="Account.Id" value="@Model.Account.Id" />
+                                }
+                            <li><button style="color:white; background:none; border:none" asp-page-handler="Home" type="submit"><a class="active">Home</a></button></li>
+                            </form>
+
+
+                            <form method="post">
+                                @if (Model.Account != null)
+                                {
+                                    <input type="hidden" asp-for="Account.Id" value="@Model.Account.Id" />
+                                }
+                            <li><button style="color:white; background:none; border:none" asp-page-handler="Properties" type="submit"><a>Properties</a></button></li>
+                            </form>
+
+
+                            @*                             <li><a asp-page="/Property-details">Property Details</a></li> *@
                             <li><a asp-page="/Contact">Contact Us</a></li>
-                            <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
+                            @*  <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li> *@
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -199,11 +216,9 @@
                                                 <form method="post">
                                                     <li>Quantity <span> <input type="number" id="AccountId" asp-for="Quantity" /></span></li>
                                                     <div class="icon-button">
-                                                        <input type="hidden" asp-for="Event" value="@Model.Event" />
-                                                        <input type="hidden" asp-for="Account" value="@Model.Account" />
-                                                        <input type="hidden" asp-for="Ticket" value="@Model.Ticket" />
-                                                        <input type="hidden" asp-for="Category" value="@Model.Category" />
-                                                        <button asp-page-handler="PropertyDetails" type="submit"> Buy Ticket</button><a><i class="fa fa-calendar"></i> Buy Ticket</a>
+                                                        <span> <input type="hidden" asp-for="Event.Id" value="@Model.Event.Id" /></span>
+                                                        <span><input type="hidden" asp-for="Account.Id" value="@Model.Account.Id" /></span>
+                                                        <button style="color:white; background:none; border:none" asp-page-handler="PropertyDetails" type="submit"> <a><i class="fa fa-calendar"></i> Buy Ticket</a></button>
                                                     </div>
                                                 </form>
                                                 <ul>

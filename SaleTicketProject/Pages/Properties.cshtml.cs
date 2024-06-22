@@ -33,6 +33,17 @@ namespace SaleTicketProject.Pages
         {
             return RedirectToPage("Property-details", new { Id = Id , accountId = Account.Id });
         }
+        public IActionResult OnPostHome()
+        {
+            Account = Account;
+            return RedirectToPage("Index",new { ID = Account!.Id });
+        }
+
+        public IActionResult OnPostProperties()
+        {
+            Account = Account;
+            return RedirectToPage(new { ID = Account!.Id });
+        }
     }
 }
 

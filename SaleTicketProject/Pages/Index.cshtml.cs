@@ -3,6 +3,7 @@ using DataAccessLayers.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Repositories.IRepository;
+using Repositories.Repository;
 
 namespace SaleTicketProject.Pages
 {
@@ -33,6 +34,14 @@ namespace SaleTicketProject.Pages
         public IActionResult OnPostProperty()
         {
             return RedirectToPage("Property-details",new { Id = Id, accountId = Account.Id});
+        }
+        public IActionResult OnPostHome()
+        {
+            return RedirectToPage("Index",new {ID = Account.Id});
+        }
+        public IActionResult OnPostProperties()
+        {
+            return RedirectToPage("Properties", new { ID = Account.Id });
         }
     }
 }

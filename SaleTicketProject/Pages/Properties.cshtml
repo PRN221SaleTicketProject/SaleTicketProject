@@ -79,11 +79,27 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a asp-page="/Index">Home</a></li>
-                            <li><a asp-page="/Properties" class="active">Properties</a></li>
-                            @*                            <li><a asp-page="/Property-details">Property Details</a></li> *@
+                            <form method="post">
+                                @if (Model.Account != null)
+                                {
+                                    <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
+                                }
+                            <li><button style="color:white; background:none; border:none" asp-page-handler="Home" type="submit"><a >Home</a></button></li>
+                            </form>
+
+                            <form method="post">
+                                @if (Model.Account != null)
+                                {
+                                    <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
+                                }
+                            <li><button style="color:white; background:none; border:none" asp-page-handler="Properties" type="submit"><a class="active">Properties</a></button></li>
+                            </form>
+
+
+                            @*                             <li><a asp-page="/Property-details">Property Details</a></li> *@
                             <li><a asp-page="/Contact">Contact Us</a></li>
-                            <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
+                            @*  <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li> *@
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
