@@ -19,6 +19,8 @@ public partial class Event
 
     public DateOnly? DateEnd { get; set; }
 
+    public string? Image { get; set; }
+
     public byte? Status { get; set; }
 
     public virtual Category? Category { get; set; }

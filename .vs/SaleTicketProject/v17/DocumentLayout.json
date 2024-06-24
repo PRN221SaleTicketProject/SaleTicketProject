@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\repositories\\repository\\solvedticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}|Repositories\\Repositories.csproj|solutionrelative:repositories\\repository\\solvedticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\properties.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\properties.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 26,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -123,45 +110,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Properties.cshtml",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Properties.cshtml",
-              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\Properties.cshtml",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Properties.cshtml",
-              "RelativeToolTip": "SaleTicketProject\\Pages\\Properties.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAF4AAACXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-22T15:11:25.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SolvedTicketRepository.cs",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\Repositories\\Repository\\SolvedTicketRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Repository\\SolvedTicketRepository.cs",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\Repositories\\Repository\\SolvedTicketRepository.cs",
-              "RelativeToolTip": "Repositories\\Repository\\SolvedTicketRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAtwCkAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T13:59:15.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Properties.cshtml.cs",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Properties.cshtml.cs",
-              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\Properties.cshtml.cs",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Properties.cshtml.cs",
-              "RelativeToolTip": "SaleTicketProject\\Pages\\Properties.cshtml.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T15:06:37.739Z",
-              "EditorCaption": ""
             }
           ]
         },

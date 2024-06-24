@@ -43,7 +43,7 @@ public partial class Prn221projectContext : DbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC27E1F0D7F5");
+            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC279D9ADDFB");
 
             entity.ToTable("Account");
 
@@ -69,12 +69,12 @@ public partial class Prn221projectContext : DbContext
 
             entity.HasOne(d => d.Role).WithMany(p => p.Accounts)
                 .HasForeignKey(d => d.RoleId)
-                .HasConstraintName("FK__Account__RoleID__3E52440B");
+                .HasConstraintName("FK__Account__RoleID__48CFD27E");
         });
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Category__3214EC2782292169");
+            entity.HasKey(e => e.Id).HasName("PK__Category__3214EC2738D5087B");
 
             entity.ToTable("Category");
 
@@ -88,7 +88,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Event>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Event__3214EC27A177C29C");
+            entity.HasKey(e => e.Id).HasName("PK__Event__3214EC27CDE2FBD2");
 
             entity.ToTable("Event");
 
@@ -98,6 +98,9 @@ public partial class Prn221projectContext : DbContext
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.DateEnd).HasColumnName("Date_End");
             entity.Property(e => e.DateStart).HasColumnName("Date_Start");
+            entity.Property(e => e.Image)
+                .HasMaxLength(255)
+                .IsUnicode(false);
             entity.Property(e => e.Location)
                 .HasMaxLength(255)
                 .IsUnicode(false);
@@ -108,12 +111,12 @@ public partial class Prn221projectContext : DbContext
 
             entity.HasOne(d => d.Category).WithMany(p => p.Events)
                 .HasForeignKey(d => d.CategoryId)
-                .HasConstraintName("FK__Event__CategoryI__3B75D760");
+                .HasConstraintName("FK__Event__CategoryI__49C3F6B7");
         });
 
         modelBuilder.Entity<Promotion>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Promotio__3214EC27ABF38693");
+            entity.HasKey(e => e.Id).HasName("PK__Promotio__3214EC27CE02F968");
 
             entity.ToTable("Promotion");
 
@@ -124,7 +127,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Role__3214EC2736CC8A10");
+            entity.HasKey(e => e.Id).HasName("PK__Role__3214EC27494C76F9");
 
             entity.ToTable("Role");
 
@@ -138,7 +141,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<SolvedTicket>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Solved_t__3214EC27A45FBFF6");
+            entity.HasKey(e => e.Id).HasName("PK__Solved_t__3214EC277CCE2FDE");
 
             entity.ToTable("Solved_ticket");
 
@@ -152,20 +155,20 @@ public partial class Prn221projectContext : DbContext
 
             entity.HasOne(d => d.Account).WithMany(p => p.SolvedTickets)
                 .HasForeignKey(d => d.AccountId)
-                .HasConstraintName("FK__Solved_ti__Accou__45F365D3");
+                .HasConstraintName("FK__Solved_ti__Accou__4AB81AF0");
 
             entity.HasOne(d => d.Promotion).WithMany(p => p.SolvedTickets)
                 .HasForeignKey(d => d.PromotionId)
-                .HasConstraintName("FK__Solved_ti__Promo__47DBAE45");
+                .HasConstraintName("FK__Solved_ti__Promo__4BAC3F29");
 
             entity.HasOne(d => d.Ticket).WithMany(p => p.SolvedTickets)
                 .HasForeignKey(d => d.TicketId)
-                .HasConstraintName("FK__Solved_ti__Ticke__46E78A0C");
+                .HasConstraintName("FK__Solved_ti__Ticke__4CA06362");
         });
 
         modelBuilder.Entity<Ticket>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Ticket__3214EC275E8B4134");
+            entity.HasKey(e => e.Id).HasName("PK__Ticket__3214EC279C8DFC8C");
 
             entity.ToTable("Ticket");
 
@@ -176,12 +179,12 @@ public partial class Prn221projectContext : DbContext
 
             entity.HasOne(d => d.Event).WithMany(p => p.Tickets)
                 .HasForeignKey(d => d.EventId)
-                .HasConstraintName("FK__Ticket__EventID__4316F928");
+                .HasConstraintName("FK__Ticket__EventID__4D94879B");
         });
 
         modelBuilder.Entity<Transaction>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27C1D40651");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC273CFEB98B");
 
             entity.ToTable("Transaction");
 
@@ -197,20 +200,20 @@ public partial class Prn221projectContext : DbContext
 
             entity.HasOne(d => d.Event).WithMany(p => p.Transactions)
                 .HasForeignKey(d => d.EventId)
-                .HasConstraintName("FK__Transacti__Event__4CA06362");
+                .HasConstraintName("FK__Transacti__Event__4E88ABD4");
 
             entity.HasOne(d => d.SolvedTicket).WithMany(p => p.Transactions)
                 .HasForeignKey(d => d.SolvedTicketId)
-                .HasConstraintName("FK__Transacti__Solve__4D94879B");
+                .HasConstraintName("FK__Transacti__Solve__4F7CD00D");
 
             entity.HasOne(d => d.Type).WithMany(p => p.Transactions)
                 .HasForeignKey(d => d.TypeId)
-                .HasConstraintName("FK__Transacti__TypeI__4E88ABD4");
+                .HasConstraintName("FK__Transacti__TypeI__5070F446");
         });
 
         modelBuilder.Entity<TransactionHistory>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27B77AFE5D");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27B41B272C");
 
             entity.ToTable("Transaction_history");
 
@@ -229,7 +232,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<TransactionType>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27219EBAE5");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27FBE4041E");
 
             entity.ToTable("Transaction_type");
 
