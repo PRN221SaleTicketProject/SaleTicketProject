@@ -47,13 +47,14 @@ namespace Repositories.Repository
                     if (databaseTicket.Quantity == 0) databaseTicket.Status = 0;
 
                     var checkSoldTicket = _unitOfWork.SolvedTicketDAO.GetAll().Count();
+                    var totalPrice = (int?)((double)databaseTicket.Price! * (double)quantity! - (double)databaseTicket.Price * (double)quantity * promotion!.Discount);
                     var solvedTicket = new SolvedTicket
                     {
                         Id = checkSoldTicket + 1,
                         AccountId = account.Id,
                         TicketId = ticket.Id,
                         Quantity = quantity,
-                        TotalPrice = (int?)((double)databaseTicket.Price! * (double)quantity! - (double)databaseTicket.Price * (double)quantity * promotion!.Discount),
+                        TotalPrice = totalPrice,
                         PromotionId = promotion!.Id,
                     };
                     var yourSolvedTicket = _unitOfWork.SolvedTicketDAO.Add(solvedTicket);
@@ -77,7 +78,7 @@ namespace Repositories.Repository
                     {
                         Id = checkTransactionHistory + 1,
                         TransactionId = transaction.Id,
-                        Price = ticket.Price,
+                        Price = totalPrice,
                         Time = DateOnly.FromDateTime(DateTime.Now),
                         Status = "Completed"
                     };
