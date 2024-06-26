@@ -26,8 +26,8 @@ namespace Repositories.Repository
         {
             var promotion = new Promotion();
             if (quantity >= 10 && quantity < 20) promotion = _unitOfWork.PromotionDAO.FindOne(a => a.Condition == 10);
-
             if (quantity >= 20) promotion = _unitOfWork.PromotionDAO.FindOne(a => a.Condition == 20);
+            promotion = _unitOfWork.PromotionDAO.FindOne(a => a.Condition == 0);
             if (promotion == null) throw new Exception("no promotion was found");
             return promotion;
         }

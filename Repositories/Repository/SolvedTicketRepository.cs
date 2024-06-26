@@ -40,14 +40,16 @@ namespace Repositories.Repository
                 {
                     if (ticket.Status == 0) continue;
                     if ((double)quantity! * (double)databaseTicket.Price! > account.Wallet) throw new Exception("YOUR PRICE IN ACCOUNT NOT ENOUGH");
-                    if ((double)quantity * (double)databaseTicket.Price <= account.Wallet) 
+                    if ((double)quantity * (double)databaseTicket.Price <= account.Wallet)
                         _accountRepository.MinusDebt(quantity, databaseTicket.Price, promotion.Discount, account);
 
                     databaseTicket.Quantity = databaseTicket.Quantity - quantity;
                     if (databaseTicket.Quantity == 0) databaseTicket.Status = 0;
 
+                    var checkSoldTicket = _unitOfWork.SolvedTicketDAO.GetAll().Count();
                     var solvedTicket = new SolvedTicket
                     {
+                        Id = checkSoldTicket + 1,
                         AccountId = account.Id,
                         TicketId = ticket.Id,
                         Quantity = quantity,
@@ -58,8 +60,10 @@ namespace Repositories.Repository
                     _unitOfWork.TicketDAO.Update(databaseTicket);
                     _unitOfWork.SaveChanges();
 
+                    var checkTransaction = _unitOfWork.TransactionDAO.GetAll().Count();
                     var transaction = new Transaction
                     {
+                        Id = checkTransaction + 1,
                         EventId = databaseTicket.EventId,
                         SolvedTicketId = yourSolvedTicket.Id,
                         TypeId = 1,
@@ -68,8 +72,10 @@ namespace Repositories.Repository
                     _unitOfWork.TransactionDAO.Add(transaction);
                     _unitOfWork.SaveChanges();
 
+                    var checkTransactionHistory = _unitOfWork.TransactionHistoryDAO.GetAll().Count();
                     var transactionHistory = new TransactionHistory
                     {
+                        Id = checkTransactionHistory + 1,
                         TransactionId = transaction.Id,
                         Price = ticket.Price,
                         Time = DateOnly.FromDateTime(DateTime.Now),
