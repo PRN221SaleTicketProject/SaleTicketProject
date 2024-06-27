@@ -59,6 +59,13 @@
     {
         <button class="btnLogin" onclick="location.href='@Url.Page("/Login")'">Login</button>
     }
+    else
+    {
+        <form method="post">
+            <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
+            <button type="submit" class="btnLogin" asp-page-handler="Profile">Profile</button>
+        </form>    
+    }
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
