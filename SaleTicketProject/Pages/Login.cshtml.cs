@@ -46,6 +46,10 @@ namespace SaleTicketProject.Pages
                 TempData["Message"] = "This account has been banned!";
                 return Page();
             }
+            if(memberStaff.RoleId == 2)
+            {
+                return RedirectToPage("SponsorView", new { ID = memberStaff.Id });
+            }
             else
             {
                 return RedirectToPage("Index", new { ID = memberStaff.Id });

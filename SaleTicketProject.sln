@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayers", "DataAcc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{AA05217F-75F8-45B2-B1FB-1DFCDC7CE95C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFEventOperation", "WPFEventOperation\WPFEventOperation.csproj", "{3439FAA1-A35D-45FD-A3C9-1D440E5549AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFEventOperation", "WPFEventOperation\WPFEventOperation.csproj", "{3439FAA1-A35D-45FD-A3C9-1D440E5549AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

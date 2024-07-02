@@ -23,7 +23,11 @@ public partial class Event
 
     public byte? Status { get; set; }
 
+    public int? SponsorId { get; set; }
+
     public virtual Category? Category { get; set; }
+
+    public virtual Account IdNavigation { get; set; } = null!;
 
     public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
 

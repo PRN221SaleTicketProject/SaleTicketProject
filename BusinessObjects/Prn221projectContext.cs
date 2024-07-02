@@ -37,7 +37,7 @@ public partial class Prn221projectContext : DbContext
     public virtual DbSet<TransactionType> TransactionTypes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    => optionsBuilder.UseSqlServer(GetConnectionString());
+   => optionsBuilder.UseSqlServer(GetConnectionString());
     private string? GetConnectionString()
     {
         IConfiguration configuration = new ConfigurationBuilder()
@@ -50,7 +50,7 @@ public partial class Prn221projectContext : DbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC279D9ADDFB");
+            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC27149C6D0A");
 
             entity.ToTable("Account");
 
@@ -81,7 +81,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Category__3214EC2738D5087B");
+            entity.HasKey(e => e.Id).HasName("PK__Category__3214EC27E05CBCDD");
 
             entity.ToTable("Category");
 
@@ -95,7 +95,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Event>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Event__3214EC27CDE2FBD2");
+            entity.HasKey(e => e.Id).HasName("PK__Event__3214EC2739ECAC16");
 
             entity.ToTable("Event");
 
@@ -105,25 +105,27 @@ public partial class Prn221projectContext : DbContext
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.DateEnd).HasColumnName("Date_End");
             entity.Property(e => e.DateStart).HasColumnName("Date_Start");
-            entity.Property(e => e.Image)
-                .HasMaxLength(255)
-                .IsUnicode(false);
+            entity.Property(e => e.Image).HasMaxLength(255);
             entity.Property(e => e.Location)
                 .HasMaxLength(255)
                 .IsUnicode(false);
-            entity.Property(e => e.Name)
-                .HasMaxLength(255)
-                .IsUnicode(false);
+            entity.Property(e => e.Name).HasMaxLength(255);
+            entity.Property(e => e.SponsorId).HasColumnName("SponsorID");
             entity.Property(e => e.TicketQuantity).HasColumnName("Ticket_Quantity");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Events)
                 .HasForeignKey(d => d.CategoryId)
                 .HasConstraintName("FK__Event__CategoryI__49C3F6B7");
+
+            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Event)
+                .HasForeignKey<Event>(d => d.Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Event_SponsorID");
         });
 
         modelBuilder.Entity<Promotion>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Promotio__3214EC27CE02F968");
+            entity.HasKey(e => e.Id).HasName("PK__Promotio__3214EC27A5064105");
 
             entity.ToTable("Promotion");
 
@@ -134,7 +136,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Role__3214EC27494C76F9");
+            entity.HasKey(e => e.Id).HasName("PK__Role__3214EC274366E864");
 
             entity.ToTable("Role");
 
@@ -148,7 +150,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<SolvedTicket>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Solved_t__3214EC277CCE2FDE");
+            entity.HasKey(e => e.Id).HasName("PK__Solved_t__3214EC276DBB670E");
 
             entity.ToTable("Solved_ticket");
 
@@ -175,7 +177,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Ticket>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Ticket__3214EC279C8DFC8C");
+            entity.HasKey(e => e.Id).HasName("PK__Ticket__3214EC27F062406C");
 
             entity.ToTable("Ticket");
 
@@ -191,7 +193,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Transaction>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC273CFEB98B");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27EDCDD4A5");
 
             entity.ToTable("Transaction");
 
@@ -220,7 +222,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<TransactionHistory>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27B41B272C");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC279734BAB8");
 
             entity.ToTable("Transaction_history");
 
@@ -239,7 +241,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<TransactionType>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27FBE4041E");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27F92666D9");
 
             entity.ToTable("Transaction_type");
 

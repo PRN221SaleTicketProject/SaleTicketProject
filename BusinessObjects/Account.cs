@@ -23,6 +23,8 @@ public partial class Account
 
     public double? Wallet { get; set; }
 
+    public virtual Event? Event { get; set; }
+
     public virtual Role? Role { get; set; }
 
     public virtual ICollection<SolvedTicket> SolvedTickets { get; set; } = new List<SolvedTicket>();
