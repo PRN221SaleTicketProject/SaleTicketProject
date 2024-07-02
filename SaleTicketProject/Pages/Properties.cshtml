@@ -147,10 +147,13 @@
                             <form method="post">
                                 @if (Model.Account != null)
                                 {
-                                    <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
+                                    <input type="hidden" asp-for="AccountId" value="@Model.Account.Id" />
                                 }
                                 <input type="hidden" asp-for="Id" value="@article.Id" />
-                                <a asp-page="/Property-details"><img src="https://daihoc.fpt.edu.vn/wp-content/uploads/2023/05/FPTU_seminarSHTT.webp" alt=""></a>
+                                @if (Model.Account != null)
+                                {
+                                    <a asp-page="/Property-details"><img src="https://daihoc.fpt.edu.vn/wp-content/uploads/2023/05/FPTU_seminarSHTT.webp" alt=""></a>
+                                }
                                 <span class="category">@article.Name</span>
                                 <h6>@article.TicketQuantity</h6>
                                 <h4><a asp-page="/Property-details">@article.Location</a></h4>
@@ -162,9 +165,12 @@
 @*                                 <div >
                                     <a asp-page="/Property-details">Schedule a visit</a>
                                 </div> *@
-                                <div class="main-button">
-                                    <button type="submit" asp-page-handler="Property" style="border: none"><a style="color: white">Schedule a visit</a></button>
-                                </div>
+                                @if (Model.Account != null)
+                                {
+                                    <div class="main-button">
+                                        <button type="submit" asp-page-handler="Property" style="border: none"><a style="color: white">Schedule a visit</a></button>
+                                    </div>
+                                }
                             </form>
                         </div>
                     </div>

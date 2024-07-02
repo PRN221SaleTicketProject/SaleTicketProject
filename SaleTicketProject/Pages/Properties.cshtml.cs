@@ -28,9 +28,12 @@ namespace SaleTicketProject.Pages
 
         [BindProperty]
         public int Id { get; set; }
+        [BindProperty]
+        public int AccountId { get; set; }
 
         public IActionResult OnPostProperty()
         {
+            Account = _accountRepository.GetById(AccountId) ?? throw new Exception();
             return RedirectToPage("Property-details", new { Id = Id , accountId = Account.Id });
         }
         public IActionResult OnPostHome()

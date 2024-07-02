@@ -453,17 +453,23 @@ s://www.ikonax.com/ana-44.jpg" alt="">
                                     <input type="hidden" asp-for="Id" value="@article.Id"/>
                                     @if (Model.Account != null)
                                     {
-                                        <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
+                                        <input type="hidden" asp-for="AccountId" value="@Model.Account.Id" />
                                     }
+                                    @if (Model.Account != null)
+                                    {
                                     <a asp-page="/PropertyDetails">
                                         <img src="@article.Image" style="height: 258px" alt="">
                                     </a>
+                                    }
                                     <span class="category">@article.Name</span>
                                     <h6>@article.TicketQuantity</h6>
                                     <h4><a>@article.Location</a></h4>
-                                    <div class="main-button">
-                                        <button type="submit" asp-page-handler="Property" style="border: none"><a style="color: white">Schedule a visit</a></button>
-                                    </div>
+                                    @if (Model.Account != null)
+                                    {
+                                        <div class="main-button">
+                                            <button type="submit" asp-page-handler="Property" style="border: none"><a style="color: white">Schedule a visit</a></button>
+                                        </div>
+                                    }
                                 </form>
 
                             </div>
