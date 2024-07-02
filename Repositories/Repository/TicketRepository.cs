@@ -31,6 +31,11 @@ namespace Repositories.Repository
         public List<Ticket> GetByEventId(int eventId)
         {
            return _unitOfWork.TicketDAO.Find(a => a.EventId == eventId).ToList();
-        } 
+        }
+
+        public void UpdateNewTicket(Ticket ticket)
+        {
+            _unitOfWork.TicketDAO.UpdateNew(ticket);
+        }
     }
 }

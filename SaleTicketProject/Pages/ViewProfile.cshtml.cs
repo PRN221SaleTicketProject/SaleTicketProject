@@ -15,7 +15,12 @@ namespace SaleTicketProject.Pages
         }
         [BindProperty]
         public Account? Account { get; set; } = null;
-        public IActionResult OnGet(short accountId)
+        [BindProperty]
+        public int AccountId { get; set; }
+
+        [BindProperty]
+        public string Password { get; set; }
+        public IActionResult OnGet(int accountId)
         {
             Account = _account.GetById(accountId);
             if (Account == null)
@@ -24,41 +29,30 @@ namespace SaleTicketProject.Pages
             }
             return Page();
         }
-        public IActionResult OnPost()
+        public IActionResult OnPostUpdate()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            if (Account == null)
-            {
-                return NotFound();
-            }
-
-            var existingAccount = _account.GetById(Account.Id);
+            var existingAccount = _account.GetById(AccountId);
             if (existingAccount == null)
             {
                 return NotFound();
             }
 
-            existingAccount.Name = Account.Name;
-            existingAccount.Email = Account.Email;
-            existingAccount.Password = Account.Password;
+            existingAccount.Password = Password;
 
             _account.Update(existingAccount);
 
             TempData["SuccessMessage"] = "Profile updated successfully!";
-            return RedirectToPage(new { accountId = Account.Id });
+            return RedirectToPage(new { accountId = existingAccount.Id });
         }
 
         public IActionResult OnPostViewHistoryTransaction()
         {
-            if (Account == null)
+            var existingAccount = _account.GetById(AccountId);
+            if (existingAccount == null)
             {
                 return NotFound();
             }
-            return RedirectToPage("ViewHistoryTransaction", new { accountId = Account.Id });
+            return RedirectToPage("ViewTransactionHIstory", new { accountId = existingAccount.Id });
         }
     }
 }

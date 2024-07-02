@@ -48,7 +48,7 @@ namespace SaleTicketProject.Pages
             }
             if(memberStaff.RoleId == 2)
             {
-                return RedirectToPage("SponsorView", new { ID = memberStaff.Id });
+                return RedirectToPage("./Sponsor/SponsorView", new { ID = memberStaff.Id });
             }
             else
             {

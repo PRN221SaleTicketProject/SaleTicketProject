@@ -105,21 +105,21 @@
         <div class="subtitle">STAFF PROFILE</div>
 
         <form method="post" id="updateProfileForm">
-            <input type="hidden" name="AccountId" value="@Model.Account.Id" />
+            <input type="hidden" name="AccountId" asp-for="AccountId" value="@Model.Account.Id" />
 
             <div class="label">Account Id</div>
             <input type="text" class="textbox" value="@Model.Account.Id" disabled />
 
             <div class="label">Account Name</div>
-            <input type="text" class="textbox" name="AccountName" value="@Model.Account.Name" disabled />
+            <input type="text" class="textbox"  name="AccountName" value="@Model.Account.Name" disabled />
 
             <div class="label">Account Email</div>
-            <input type="email" class="textbox" name="AccountEmail" value="@Model.Account.Email" disabled />
+            <input type="email" class="textbox"  name="AccountEmail" value="@Model.Account.Email" disabled />
 
             <div class="label">Account Password</div>
-            <input type="password" class="textbox" name="AccountPassword" value="@Model.Account.Password" />
+            <input type="password" class="textbox" asp-for="Password" name="Password" value="@Model.Account.Password" />
 
-            <button type="submit" class="button button-secondary">Update Profile</button>
+            <button type="submit" class="button button-secondary" asp-page-handler="Update">Update Profile</button>
 
             <div class="button-container">
                 <button class="button button-primary" asp-page-handler="ViewHistoryTransaction">View History Transaction</button>

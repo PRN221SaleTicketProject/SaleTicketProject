@@ -64,7 +64,7 @@
         <form method="post">
             <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
             <button type="submit" class="btnLogin" asp-page-handler="Profile">Profile</button>
-        </form>    
+        </form>
     }
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
@@ -112,7 +112,7 @@
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
-                        
+
                         <ul class="nav">
                             <form method="post">
                                 @if (Model.Account != null)
@@ -133,10 +133,10 @@
 
                             @*                             <li><a asp-page="/Property-details">Property Details</a></li> *@
                             <li><a asp-page="/Contact">Contact Us</a></li>
-                           @*  <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li> *@
-                        
+                            @*  <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li> *@
+
                         </ul>
-                        
+
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
@@ -446,35 +446,38 @@ s://www.ikonax.com/ana-44.jpg" alt="">
 
                 @foreach (var article in Model.Events)
                 {
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item">
-                            <div>
-                                <form method="post">
-                                    <input type="hidden" asp-for="Id" value="@article.Id"/>
-                                    @if (Model.Account != null)
-                                    {
-                                        <input type="hidden" asp-for="AccountId" value="@Model.Account.Id" />
-                                    }
-                                    @if (Model.Account != null)
-                                    {
-                                    <a asp-page="/PropertyDetails">
-                                        <img src="@article.Image" style="height: 258px" alt="">
-                                    </a>
-                                    }
-                                    <span class="category">@article.Name</span>
-                                    <h6>@article.TicketQuantity</h6>
-                                    <h4><a>@article.Location</a></h4>
-                                    @if (Model.Account != null)
-                                    {
-                                        <div class="main-button">
-                                            <button type="submit" asp-page-handler="Property" style="border: none"><a style="color: white">Schedule a visit</a></button>
-                                        </div>
-                                    }
-                                </form>
+                    @if (article.SponsorId != null && article.Status == 1)
+                    {
+                        <div class="col-lg-4 col-md-6">
+                            <div class="item">
+                                <div>
+                                    <form method="post">
+                                        <input type="hidden" asp-for="Id" value="@article.Id" />
+                                        @if (Model.Account != null)
+                                        {
+                                            <input type="hidden" asp-for="AccountId" value="@Model.Account.Id" />
+                                        }
+                                        @if (Model.Account != null)
+                                        {
+                                            <a asp-page="/PropertyDetails">
+                                                <img src="@article.Image" style="height: 258px" alt="">
+                                            </a>
+                                        }
+                                        <span class="category">@article.Name</span>
+                                        <h6>@article.TicketQuantity</h6>
+                                        <h4><a>@article.Location</a></h4>
+                                        @if (Model.Account != null)
+                                        {
+                                            <div class="main-button">
+                                                <button type="submit" asp-page-handler="Property" style="border: none"><a style="color: white">Schedule a visit</a></button>
+                                            </div>
+                                        }
+                                    </form>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
                 }
 
             </div>

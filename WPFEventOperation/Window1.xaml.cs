@@ -42,7 +42,7 @@ namespace WPFEventOperation
         private void LoadData()
         {
             this.dgData.ItemsSource = null;
-            var accounts = _eventCategory.GetAll().Select(a => new { a.Name, a.CategoryId, a.TicketQuantity, a.Location, a.DateStart,a.DateEnd,a.Image });
+            var accounts = _eventCategory.GetAll().Where(a => a.Status == 1).Select(a => new {a.Id, a.Name, a.CategoryId, a.TicketQuantity, a.Location, a.DateStart,a.DateEnd,a.Image });
             dgData.ItemsSource = accounts;
         }
 
@@ -168,12 +168,79 @@ namespace WPFEventOperation
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
+            if(txt.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtTicketQuantity.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtLocation.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (MessageBoxResult.Yes == MessageBox.Show("Do you want update ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
+            {
+                var UpdateEvent = _eventCategory.GetById(int.Parse(txtId.Text));
+                if (UpdateEvent == null)
+                {
+                    MessageBox.Show($"Event Not Found!");
+                    return;
+                }
+                var UpdateTicket = _ticketRepository.GetByEventId(UpdateEvent.Id);
+                if (UpdateTicket == null)
+                {
+                    MessageBox.Show($"Ticket Not Found!");
+                    return;
+                }
+                UpdateEvent.Name = txt.Text;
+                UpdateEvent.TicketQuantity = int.Parse(txtTicketQuantity.Text);
+                UpdateEvent.Location = txtLocation.Text;
+                _eventCategory.Update(UpdateEvent);
+
+                foreach (var newiUpdateTicket in UpdateTicket)
+                {
+                    newiUpdateTicket.Quantity = int.Parse(txtTicketQuantity.Text);
+                    _ticketRepository.UpdateNewTicket(newiUpdateTicket);
+                }
+                MessageBox.Show("update completed!", "Exit", MessageBoxButton.OK);
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show($"update failed!");
+            }
 
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            var UpdateEvent = _eventCategory.GetById(int.Parse(txtId.Text));
+            if (UpdateEvent == null)
+            {
+                MessageBox.Show($"Event Not Found!");
+                return;
+            }
+            if (UpdateEvent.SponsorId != null)
+            {
+                MessageBox.Show("Can't delete due to having Sponsor");
+                return;
+            }
+            if (MessageBoxResult.Yes == MessageBox.Show("Do you want delete ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
+            {
+                UpdateEvent.Status = 0;
+                _eventCategory.Update(UpdateEvent);
+                MessageBox.Show("delete completed!", "Exit", MessageBoxButton.OK);
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show($"delete failed!");
+            }
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

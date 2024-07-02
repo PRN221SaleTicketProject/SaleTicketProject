@@ -1,4 +1,5 @@
 ﻿using BusinessObjects;
+using BusinessObjects.Enum;
 using DataAccessLayers;
 using DataAccessLayers.UnitOfWork;
 using Repositories.IRepository;
@@ -24,6 +25,11 @@ namespace Repositories.Repository
         public List<TransactionHistory> GetTransactionHistoryByAccountId(int accountId)
         {
             return _unitOfWork.TransactionHistoryDAO.Find(a => a.Transaction!.SolvedTicket!.AccountId == accountId).ToList();
+        }
+
+        public List<TransactionHistoryDto> GetAllTransactionHistoryByAccountId(int accountId)
+        {
+            return _unitOfWork.TransactionHistoryDAO.GetAllTransactionHistoryByAccountId(accountId);
         }
     }
 }

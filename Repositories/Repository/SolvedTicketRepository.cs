@@ -1,6 +1,7 @@
 ﻿using BusinessObjects;
 using DataAccessLayers;
 using DataAccessLayers.UnitOfWork;
+using Microsoft.IdentityModel.Tokens;
 using Repositories.IRepository;
 using System;
 using System.Collections.Generic;
@@ -91,6 +92,19 @@ namespace Repositories.Repository
         public List<SolvedTicket> GetSolvedTicketsByAccountId(int accountId)
         {
             return _unitOfWork.SolvedTicketDAO.Find(a => a.AccountId == accountId).ToList();
+        }
+
+        public Boolean CheckSolvedTicket(int ticketId)
+        {
+            var checksolvedTicket = _unitOfWork.SolvedTicketDAO.Find(a => a.TicketId == ticketId);
+            if (checksolvedTicket.IsNullOrEmpty())
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

@@ -11,5 +11,6 @@ namespace Repositories.IRepository
     {
         int? CountQuantityPeopleJoinEvent(Event eventName);
         List<Ticket> GetByEventId(int eventId);
+        void UpdateNewTicket(Ticket ticket);
     }
 }

@@ -11,5 +11,6 @@ namespace Repositories.IRepository
     {
         void PurchaseTickets(List<Ticket> tickets, Account account, int quantity);
         List<SolvedTicket> GetSolvedTicketsByAccountId(int accountId);
+        public Boolean CheckSolvedTicket(int ticketId);
     }
 }

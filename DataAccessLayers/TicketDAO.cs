@@ -1,4 +1,5 @@
 ﻿using BusinessObjects;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,16 @@ namespace DataAccessLayers
             var remainingTickets = totalTicketQuantity - soldTicketQuantity;
 
             return remainingTickets;
+        }
+
+        public void UpdateNew(Ticket ticket)
+        {
+            if (_context.Entry(ticket).State == EntityState.Detached)
+            {
+                _context.Tickets.Attach(ticket);
+            }
+            _context.Entry(ticket).State = EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 }
