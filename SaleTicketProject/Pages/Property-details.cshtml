@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/css/templatemo-villa-agency.css">
     <link rel="stylesheet" href="/css/owl.css">
     <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/discount.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <!--
 
@@ -222,6 +223,7 @@
                                                     </div>
                                                 </form>
                                                 <ul>
+                                                    <li id="discount">Discount <span>0%</span></li>
                                                     <li>Type of Class <span>Normal</span></li>
                                                     <li>Seat Service <span>Bottle Water</span></li>
                                                   
@@ -368,6 +370,32 @@
     <script src="/js/owl-carousel.js"></script>
     <script src="/js/counter.js"></script>
     <script src="/js/custom.js"></script>
+    <script>
+        document.getElementById('quantity').addEventListener('input', function () {
+            var quantity = parseInt(this.value);
+            var discount = 0;
 
+            if (quantity >= 20) {
+                discount = 20;
+            } else if (quantity >= 10) {
+                discount = 10;
+            }
+
+            document.getElementById('discount').innerHTML = 'Discount <span>' + discount + '%</span>';
+        });
+
+        // Function to change the color of the discount text continuously
+        function changeColor() {
+            var colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
+            var currentColor = 0;
+            setInterval(function () {
+                document.getElementById('discount').style.color = colors[currentColor];
+                currentColor = (currentColor + 1) % colors.length;
+            }, 1000); // Change color every 1 second
+        }
+
+        // Call the changeColor function when the page loads
+        window.onload = changeColor;
+    </script>
 </body>
 </html>
