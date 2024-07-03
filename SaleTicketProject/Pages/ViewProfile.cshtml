@@ -117,7 +117,10 @@
             <input type="email" class="textbox"  name="AccountEmail" value="@Model.Account.Email" disabled />
 
             <div class="label">Account Password</div>
-            <input type="password" class="textbox" asp-for="Password" name="Password" value="@Model.Account.Password" />
+            <input type="password" class="textbox" asp-for="Password" name="AccountPassword" value="@Model.Account.Password" />
+
+            <div class="label">Wallet</div>
+            <input type="number" class="label" name="AccountWallet" value="@Model.Account.Wallet" disabled />
 
             <button type="submit" class="button button-secondary" asp-page-handler="Update">Update Profile</button>
 
@@ -140,6 +143,7 @@
                         AccountName: document.querySelector('input[name="AccountName"]').value,
                         AccountEmail: document.querySelector('input[name="AccountEmail"]').value,
                         AccountPassword: document.querySelector('input[name="AccountPassword"]').value
+                        AccountWallet: document.querySelector('input[name="AccountWallet"]').value
                     })
                 }).then(response => response.json()).then(data => {
                     if (data.success) {

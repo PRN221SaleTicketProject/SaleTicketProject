@@ -39,6 +39,8 @@
     <div class="container">
         <h1>View Transaction History</h1>
     </div>
+    @if(Model.TransactionHistory.Count != 0)
+    {       
     <div class="datagrid">
         <table id="dgData">
             <thead>
@@ -66,5 +68,6 @@
             </tbody>
         </table>
     </div>
+    }
 </body>
 </html>
