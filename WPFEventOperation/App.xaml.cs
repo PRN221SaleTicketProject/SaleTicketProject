@@ -47,6 +47,7 @@ namespace WPFEventOperation
             services.AddSingleton<AccountDAO>();
             services.AddSingleton<MainWindow>();
             services.AddSingleton<Window1>();
+            services.AddSingleton<Window2>();
         }
 
         private void Application_Startup(object sender, StartupEventArgs e)

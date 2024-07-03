@@ -41,7 +41,12 @@ namespace SaleTicketProject.Pages
                 TempData["Message"] = "Email or Password invalid...";
                 return Page();
             }
-            if(memberStaff.Status == 0)
+            if (memberStaff.RoleId == 3 || memberStaff.RoleId == 4)
+            {
+                TempData["Message"] = "This page is not allow for admin and event operator...";
+                return Page();
+            }
+            if (memberStaff.Status == 0)
             {
                 TempData["Message"] = "This account has been banned!";
                 return Page();

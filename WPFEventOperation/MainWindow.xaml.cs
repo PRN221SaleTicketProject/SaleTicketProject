@@ -62,10 +62,18 @@ namespace WPFEventOperation
                 return;
             }
 
-            else
+            else if(admin.RoleId == 3)
             {
                 Window1 page1 = new Window1(_accountRepository,_eventCategory , _categoryRepository, _ticketRepository);
                 page1.Show();
+                MessageBox.Show("OKE EVENT OPERATOR");
+                this.Close();
+            }
+
+            else
+            {
+                Window2 page2 = new Window2(_accountRepository);
+                page2.Show();
                 MessageBox.Show("OKE ADMIN");
                 this.Close();
             }
