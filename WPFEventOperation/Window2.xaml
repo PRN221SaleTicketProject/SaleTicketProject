@@ -38,7 +38,7 @@
                 <ColumnDefinition Width="513*"/>
             </Grid.ColumnDefinitions>
 
-            <Label x:Name="label" Content="Event Management" Grid.Column="2" Grid.Row="0" FontSize="36" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="466"/>
+            <Label x:Name="label" Content="Account Management" Grid.Column="2" Grid.Row="0" FontSize="36" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="466"/>
             <TextBox x:Name="txtId" Margin ="4,4,4,4" Grid.Column="2" Grid.Row="1" Text="{Binding SelectedItem.Id, ElementName=dgData, Mode=OneWay}" TextWrapping="Wrap" Grid.ColumnSpan="2" Visibility="Hidden"/>
             
             <Label x:Name="label4" Margin ="2,2,2,2"  Content="Account Name" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>
