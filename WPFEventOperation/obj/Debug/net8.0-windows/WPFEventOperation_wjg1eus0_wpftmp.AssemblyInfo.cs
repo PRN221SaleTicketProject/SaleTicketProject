@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WPFEventOperation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d95e2ec38bbd6c877d78970afa649e759b60b409")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebe1ea2c45a7e4e3b5e6745e3848266e0704c4c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("WPFEventOperation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WPFEventOperation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

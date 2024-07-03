@@ -34,15 +34,33 @@ namespace SaleTicketProject.Pages
         public Category Category { get; set; }
         [BindProperty]
         public int Quantity { get; set; }
+        [BindProperty]
+        public int Id { get; set; }
         public IActionResult OnPostPropertyDetails()
         {
+            if(Quantity == null || Quantity == 0)
+            {
+                TempData["ErrorMessage"] = "Quantity cannot null or 0!";
+                return RedirectToPage(new { Id = Event.Id, accountId = Account.Id });
+            }
             Account = _accountRepository.GetById((int)Account.Id!);
             Event = _eventRepository.GetById(Event.Id);
             Ticket = _ticketRepository.GetByEventId(Event.Id);
             Category = _categoryRepository.GetById((int)Event.CategoryId!);
+
+            double? totalQUantity = 0;
+            foreach (var ticket in Ticket)
+            {
+                totalQUantity = (double?)(Quantity * ticket.Price);
+            }
+            if(Account!.Wallet < totalQUantity)
+            {
+                TempData["WarningMessage"] = "Your wallet is not enough to buy tickets!";
+                return RedirectToPage(new { Id = Event.Id, accountId = Account.Id });
+            }
             _solvedTicketRepository.PurchaseTickets(Ticket, Account, Quantity);
-            //return RedirectToPage(new {Id = Event.Id, accountId = Account.Id});
-            return Page();
+            TempData["SuccessMessage"] = "Buy tickets successfully!";
+            return RedirectToPage(new { Id = Event.Id, accountId = Account.Id });
         }
         public void OnGet(int Id, int accountId)
         {
@@ -61,6 +79,11 @@ namespace SaleTicketProject.Pages
         {
             Account = _accountRepository.GetById((int)Account.Id!);
             return RedirectToPage("/Properties", new { ID = Account!.Id });
+        }
+
+        public IActionResult OnPostContact()
+        {
+            return RedirectToPage("Contact", new { ID = Account.Id });
         }
     }
 }

@@ -32,6 +32,26 @@
     https://templatemo.com/tm-591-villa-agency
 
     -->
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+            .alert.success {
+                background-color: #4CAF50;
+            }
+
+            .alert.info {
+                background-color: #2196F3;
+            }
+
+            .alert.warning {
+                background-color: #ff9800;
+            }
+    </style>
 </head>
 
 <body>
@@ -86,24 +106,29 @@
                             <form method="post">
                                 @if (Model.Account != null)
                                 {
-                                    <input type="hidden" asp-for="Account.Id" value="@Model.Account.Id" />
+                                    <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
                                 }
-                            <li><button style="color:white; background:none; border:none" asp-page-handler="Home" type="submit"><a class="active">Home</a></button></li>
+                            <li><button style="color:white; background:none; border:none" asp-page-handler="Home" type="submit"><a>Home</a></button></li>
+                            </form>
+
+                            <form method="post">
+                                @if (Model.Account != null)
+                                {
+                                    <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
+                                }
+                            <li><button style="color:white; background:none; border:none" asp-page-handler="Properties" type="submit"><a>Properties</a></button></li>
                             </form>
 
 
                             <form method="post">
                                 @if (Model.Account != null)
                                 {
-                                    <input type="hidden" asp-for="Account.Id" value="@Model.Account.Id" />
+                                    <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
                                 }
-                            <li><button style="color:white; background:none; border:none" asp-page-handler="Properties" type="submit"><a>Properties</a></button></li>
+                            <li><button style="color:white; background:none; border:none" asp-page-handler="Contact" type="submit"><a>Contact Us</a></button></li>
                             </form>
 
 
-                            @*                             <li><a asp-page="/Property-details">Property Details</a></li> *@
-                            <li><a asp-page="/Contact">Contact Us</a></li>
-                            @*  <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li> *@
 
                         </ul>
                         <a class='menu-trigger'>
@@ -127,6 +152,25 @@
             </div>
         </div>
     </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    @if (TempData["WarningMessage"] != null)
+    {
+        <div class="alert warning">
+            @TempData["WarningMessage"]
+        </div>
+    }
 
     <div class="section best-deal">
         <div class="container">
@@ -226,7 +270,7 @@
                                                     <li id="discount">Discount <span>0%</span></li>
                                                     <li>Type of Class <span>Normal</span></li>
                                                     <li>Seat Service <span>Bottle Water</span></li>
-                                                  
+
                                                     @foreach (var article in Model.Ticket)
                                                     {
                                                         <li>Price <span>@article.Price </span></li>
@@ -245,7 +289,7 @@
                                                 The normal chair offers a comfortable seating experience with 1 square meter of space, providing adequate room for attendees during the event. Positioned in the middle to last rows, it offers a good view of the stage or event area, allowing guests to enjoy the proceedings.
                                                 <br><br>The normal chair includes basic amenities such as complimentary bottled water, ensuring hydration throughout the event. Guests can secure their seat through a straightforward registration process, requiring completion of a form and a payment of 70,000 VND, making it accessible for attendees looking to participate in the event.
                                             </p>
- 
+
                                         </div>
                                     </div>
                                 </div>
@@ -348,7 +392,7 @@
         </div>
     </div>
 
-    
+
 
     @*     <footer class="footer-no-gap">
     <div class="container">

@@ -47,6 +47,11 @@ namespace SaleTicketProject.Pages
             Account = Account;
             return RedirectToPage(new { ID = Account!.Id });
         }
+        public IActionResult OnPostContact()
+        {
+            Account = Account;
+            return RedirectToPage("Contact", new { ID = Account.Id });
+        }
     }
 }
 

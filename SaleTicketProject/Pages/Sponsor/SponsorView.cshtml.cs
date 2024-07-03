@@ -57,6 +57,7 @@ namespace SaleTicketProject.Pages.Sponsor
             Account = _accountRepository.GetById(AccountId) ?? throw new Exception();
             newEvent.SponsorId = Account.Id;
             _eventRepository.Update(newEvent);
+            TempData["SuccessMessage"] = "Sponsor event successfully!";
             return RedirectToPage(new { ID = Account.Id });
         }
 
@@ -66,7 +67,7 @@ namespace SaleTicketProject.Pages.Sponsor
             Account = _accountRepository.GetById(AccountId) ?? throw new Exception();
             var ticket = _ticketRepository.GetByEventId(newEvent.Id);
             Boolean checkSolvedTicket = false;
-            foreach (var checkticket  in ticket)
+            foreach (var checkticket in ticket)
             {
                 checkSolvedTicket = _solvedTicketRepository.CheckSolvedTicket(checkticket.Id);
             }
@@ -74,14 +75,15 @@ namespace SaleTicketProject.Pages.Sponsor
             {
                 newEvent.SponsorId = null;
                 _eventRepository.Update(newEvent);
+                TempData["SuccessMessage"] = "Disable Sponsor event successfully!";
                 return RedirectToPage(new { ID = Account.Id });
             }
             else
             {
                 TempData["Message"] = "This event's tickets have been bought, cannot take back!";
                 return RedirectToPage(new { ID = Account.Id });
-            }    
- 
+            }
+
         }
     }
 }

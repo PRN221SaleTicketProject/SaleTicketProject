@@ -36,11 +36,13 @@ namespace SaleTicketProject.Pages
             {
                 return NotFound();
             }
-
+            if(Password == null)
+            {
+                TempData["ErrorMessage"] = "Password is not null!";
+                return RedirectToPage(new { accountId = existingAccount.Id });
+            }
             existingAccount.Password = Password;
-
             _account.Update(existingAccount);
-
             TempData["SuccessMessage"] = "Profile updated successfully!";
             return RedirectToPage(new { accountId = existingAccount.Id });
         }

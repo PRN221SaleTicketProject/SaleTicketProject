@@ -96,9 +96,15 @@
                             </form>
 
 
-                            @*                             <li><a asp-page="/Property-details">Property Details</a></li> *@
-                            <li><a asp-page="/Contact">Contact Us</a></li>
-                            @*  <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li> *@
+                            <form method="post">
+                                @if (Model.Account != null)
+                                {
+                                    <input type="hidden" asp-for="Id" value="@Model.Account.Id" />
+                                }
+                            <li><button style="color:white; background:none; border:none" asp-page-handler="Contact" type="submit"><a>Contact Us</a></button></li>
+                            </form>
+
+
 
                         </ul>
                         <a class='menu-trigger'>
