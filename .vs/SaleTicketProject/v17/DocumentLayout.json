@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\viewtransactionhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\viewtransactionhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 26,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,7 +130,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\Index.cshtml",
+              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Index.cshtml",
+              "RelativeToolTip": "SaleTicketProject\\Pages\\Index.cshtml",
+              "ViewState": "AQIAADACAAAAAAAAAAAiwEwCAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T11:47:23.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ViewProfile.cshtml",
+              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\ViewProfile.cshtml",
+              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\ViewProfile.cshtml",
+              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\ViewProfile.cshtml",
+              "RelativeToolTip": "SaleTicketProject\\Pages\\ViewProfile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T11:46:44.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\Login.cshtml",
+              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Login.cshtml",
+              "RelativeToolTip": "SaleTicketProject\\Pages\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T11:42:44.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ViewTransactionHIstory.cshtml",
               "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\ViewTransactionHIstory.cshtml",
               "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\ViewTransactionHIstory.cshtml",
