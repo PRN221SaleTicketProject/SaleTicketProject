@@ -38,9 +38,9 @@ namespace SaleTicketProject.Pages
         public int Id { get; set; }
         public IActionResult OnPostPropertyDetails()
         {
-            if(Quantity == null || Quantity == 0)
+            if(Quantity == null || Quantity == 0 || Quantity < 0)
             {
-                TempData["ErrorMessage"] = "Quantity cannot null or 0!";
+                TempData["ErrorMessage"] = "Quantity cannot null or 0 lower 0!";
                 return RedirectToPage(new { Id = Event.Id, accountId = Account.Id });
             }
             Account = _accountRepository.GetById((int)Account.Id!);

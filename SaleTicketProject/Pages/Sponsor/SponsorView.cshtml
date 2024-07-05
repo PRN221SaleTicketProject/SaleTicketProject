@@ -308,7 +308,7 @@
                                     <input type="hidden" asp-for="Id" value="@article.Id" />
                                     @if (Model.Account != null)
                                     {
-                                        <a asp-page="/Property-details"><img src="@article.Image" alt=""></a>
+                                        <a asp-page="/Property-details"><img src="@article.Image" style="height: 258px" alt=""></a>
                                     }
                                     <span class="category">@article.Name</span>
                                     <h6>@article.TicketQuantity</h6>
