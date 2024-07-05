@@ -112,7 +112,22 @@ namespace WPFEventOperation
                 MessageBox.Show("must have link image");
                 return;
             }
-
+            var checkTime = @"^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/((19|20)\d\d)$";
+            if (!Regex.IsMatch(txtDateStart.Text, checkTime) || !Regex.IsMatch(txtDateEnd.Text, checkTime))
+            {
+                MessageBox.Show("you must fill the format MM/DD/YYYY with the real time!");
+                return;
+            }
+            if (!int.TryParse(txtTicketQuantity.Text, out int quantity))
+            {
+                MessageBox.Show("must number!");
+                return;
+            }
+            if(int.Parse(txtTicketQuantity.Text) <= 0)
+            {
+                MessageBox.Show("must not smaller or equal 0!");
+                return;
+            }
             var checkExist = _categoryRepository.GetById(int.Parse(txtCategpryType.Text));
             if (checkExist == null)
             {
