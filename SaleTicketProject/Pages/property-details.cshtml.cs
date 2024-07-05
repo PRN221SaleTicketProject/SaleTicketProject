@@ -48,6 +48,20 @@ namespace SaleTicketProject.Pages
             Ticket = _ticketRepository.GetByEventId(Event.Id);
             Category = _categoryRepository.GetById((int)Event.CategoryId!);
 
+            foreach(var ticket in Ticket)
+            {
+                if (ticket.Quantity == 0)
+                {
+                    TempData["ErrorMessage"] = "Ticket Sold Out!";
+                    return RedirectToPage(new { Id = Event.Id, accountId = Account.Id });
+                }
+                if (ticket.Quantity < Quantity)
+                {
+                    TempData["WarningMessage"] = "Not Enough Ticket for you to buy!";
+                    return RedirectToPage(new { Id = Event.Id, accountId = Account.Id });
+                }
+            }
+
             double? totalQUantity = 0;
             foreach (var ticket in Ticket)
             {

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/css/owl.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
     <!--
 
     TemplateMo 591 villa agency
@@ -47,6 +48,36 @@
             .alert.warning {
                 background-color: #ff9800;
             }
+
+        .student-profile .card {
+            border-radius: 10px;
+        }
+
+            .student-profile .card .card-header .profile_img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                margin: 10px auto;
+                border: 10px solid #ccc;
+                border-radius: 50%;
+            }
+
+            .student-profile .card h3 {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .student-profile .card p {
+                font-size: 16px;
+                color: #000;
+            }
+
+        .student-profile .table th,
+        .student-profile .table td {
+            font-size: 14px;
+            padding: 5px 10px;
+            color: #000;
+        }
     </style>
 </head>
 
@@ -96,7 +127,86 @@
         </div>
     </div>
 
-    @if (TempData["Message"] != null)
+    <div class="student-profile py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-transparent text-center">
+                            <img class="profile_img" src="https://cellphones.com.vn/sforum/wp-content/uploads/2023/10/avatar-trang-4.jpg" alt="student dp">
+                            <h3>@Model.Account.Name</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0"><strong class="pr-1">Account ID:</strong> @Model.Account.Id</p>
+                            <p class="mb-0"><strong class="pr-1">Email:</strong> @Model.Account.Email</p>
+                            <p class="mb-0"><strong class="pr-1">Phone:</strong> @Model.Account.Phone</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="mb-0"><i class="far fa-clone pr-1"></i> General Information</h3>
+                        </div>
+                        <div class="card-body pt-0">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th width="30%">Role</th>
+                                    <td width="2%">:</td>
+                                    <td>@Model.RoleName.Name</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">Password	</th>
+                                    <td width="2%">:</td>
+                                    <td>@Model.Account.Password</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">Status</th>
+                                    <td width="2%">:</td>
+                                    <td>@Model.Account.Status</td>
+                                </tr>
+@*                                 <tr>
+                                    <th width="30%">Religion</th>
+                                    <td width="2%">:</td>
+                                    <td>Group</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">blood</th>
+                                    <td width="2%">:</td>
+                                    <td>B+</td>
+                                </tr> *@
+                            </table>
+                        </div>
+                    </div>
+                    <div style="height: 26px"></div>
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="mb-0"><i class="far fa-clone pr-1"></i> Notification</h3>
+                        </div>
+                        <div class="card-body pt-0">
+                            <br />
+                            <h3>Notice to Sponsor</h3>
+                            <br />
+                            @if (TempData["Message"] != null)
+                            {
+                                <div class="alert warning">
+                                    @TempData["Message"]
+                                </div>
+                            }
+                            @if (TempData["SuccessMessage"] != null)
+                            {
+                                <div class="alert success">
+                                    @TempData["SuccessMessage"]
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+@*     @if (TempData["Message"] != null)
     {
         <div class="alert warning">
             @TempData["Message"]
@@ -107,7 +217,7 @@
         <div class="alert success">
             @TempData["SuccessMessage"]
         </div>
-    }
+    } *@
 
     <div class="section best-deal">
         <div class="container">
@@ -148,11 +258,11 @@
                                                             {
                                                                 <a asp-page="/Property-details"><img src="@article.Image" alt=""></a>
                                                             }
-                                                            <br/>
-                                                            <br/>
-                                                            <br/>
-                                                            <br/>
-                                                            <br/>
+                                                            <br />
+                                                            <br />
+                                                            <br />
+                                                            <br />
+                                                            <br />
                                                             <ul>
                                                                 <li>Event Name <span>@article.Name</span></li>
                                                                 <li>Ticket Quantity <span>@article.TicketQuantity</span></li>

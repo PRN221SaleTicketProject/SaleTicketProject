@@ -382,7 +382,15 @@
                                 <img src="/images/info-icon-04.png" alt="" style="max-width: 52px;">
                                 @foreach (var article in Model.Ticket)
                                 {
-                                    <h4>@article.Quantity<br><span>Tickets</span></h4>
+                                    @if(article.Quantity == 0)
+                                    {
+                                        <h4 style="color: red">SOLD OUT<br><span>Tickets</span></h4>
+                                    }
+                                    else
+                                    {
+                                        <h4>@article.Quantity<br><span>Tickets</span></h4>
+                                    }
+                            
                                 }
                             </li>
                         </ul>

@@ -11,21 +11,28 @@ namespace SaleTicketProject.Pages.Sponsor
         private readonly IAccountRepository _accountRepository;
         private readonly ITicketRepository _ticketRepository;
         private readonly ISolvedTicketRepository _solvedTicketRepository;
+        private readonly IRoleRepository _roleRepository;
 
         public List<Event> Events = new List<Event>();
-        public SponsorViewModel(IEventCategory eventRepository, IAccountRepository accountRepository, ITicketRepository ticketRepository, ISolvedTicketRepository solvedTicketRepository)
+        public SponsorViewModel(IEventCategory eventRepository, IAccountRepository accountRepository, ITicketRepository ticketRepository, ISolvedTicketRepository solvedTicketRepository, IRoleRepository roleRepository)
         {
             _accountRepository = accountRepository;
             _eventRepository = eventRepository;
             _ticketRepository = ticketRepository;
             _solvedTicketRepository = solvedTicketRepository;
+            _roleRepository = roleRepository;
         }
 
         [BindProperty]
         public Account Account { get; set; }
+
+        [BindProperty]
+        public Role RoleName { get; set; }
         public void OnGet(int ID)
         {
+
             Account = _accountRepository.GetById(ID)!;
+            RoleName = _roleRepository.GetById((int)Account.RoleId);
             Events = _eventRepository.GetAll().ToList();
         }
 
