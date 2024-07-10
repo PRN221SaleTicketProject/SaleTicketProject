@@ -26,7 +26,7 @@ namespace SaleTicketProject.Pages
         public void OnGet(int ID)
         {
             Account = _accountRepository.GetById(ID)!;
-            Events = _eventRepository.GetAll().ToList();
+            Events = _eventRepository.GetAllInclude().ToList();
         }
         [BindProperty]
         public int Id { get; set; }

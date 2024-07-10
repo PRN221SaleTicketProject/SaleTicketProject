@@ -25,9 +25,11 @@ public partial class Event
 
     public int? SponsorId { get; set; }
 
+    public string? ServiceSponsor { get; set; }
+
     public virtual Category? Category { get; set; }
 
-    public virtual Account IdNavigation { get; set; } = null!;
+    public virtual Account? Sponsor { get; set; }
 
     public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
 

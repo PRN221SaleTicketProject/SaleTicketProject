@@ -40,6 +40,8 @@ namespace SaleTicketProject.Pages.Sponsor
         public int Id { get; set; }
         [BindProperty]
         public int AccountId { get; set; }
+        [BindProperty]
+        public string ServiceSponsor {  get; set; }
 
         public IActionResult OnPostProperty()
         {
@@ -63,6 +65,7 @@ namespace SaleTicketProject.Pages.Sponsor
             var newEvent = _eventRepository.GetById(Id) ?? throw new Exception();
             Account = _accountRepository.GetById(AccountId) ?? throw new Exception();
             newEvent.SponsorId = Account.Id;
+            newEvent.ServiceSponsor = ServiceSponsor;
             _eventRepository.Update(newEvent);
             TempData["SuccessMessage"] = "Sponsor event successfully!";
             return RedirectToPage(new { ID = Account.Id });
@@ -81,6 +84,7 @@ namespace SaleTicketProject.Pages.Sponsor
             if (checkSolvedTicket is false)
             {
                 newEvent.SponsorId = null;
+                newEvent.ServiceSponsor = null;
                 _eventRepository.Update(newEvent);
                 TempData["SuccessMessage"] = "Disable Sponsor event successfully!";
                 return RedirectToPage(new { ID = Account.Id });

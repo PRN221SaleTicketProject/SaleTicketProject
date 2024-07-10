@@ -271,6 +271,7 @@
                                                                 <li>Date Start <span>@article.DateStart</span></li>
                                                                 <li>Date End <span>@article.DateEnd</span></li>
                                                                 <li>Category <span>@article.CategoryId</span></li>
+                                                                <li>Service Sponsor <span>@article.ServiceSponsor</span></li>
                                                             </ul>
                                                             <div class="icon-button">
                                                                 <button style="color:white; background:none; border:none" asp-page-handler="NotSponsor" type="submit"> <a><i class="fa fa-calendar"></i> Not Agree</a></button>
@@ -323,6 +324,16 @@
                             </div> *@
                                     @if (Model.Account != null)
                                     {
+                                        <label for="categories">Sponsor's Service Options:</label>
+                                        <select asp-for="ServiceSponsor" id="categories">
+                                            <option value="Drink">Drink</option>
+                                            <option value="Food">Food</option>
+                                            <option value="Gift">Gift</option>
+                                            <option value="Drink & Food">Drink & Food</option>
+                                            <option value="Drink & Gift">Drink & Gift</option>
+                                            <option value="Food & Gift">Food & Gift</option>
+                                            <option value="Drink & Food & Gift">Drink & Food & Gift</option>
+                                        </select>
                                         <div class="main-button">
                                             <button type="submit" asp-page-handler="Sponsor" style="border: none"><a style="color: white">Agree Sponsor</a></button>
                                         </div>

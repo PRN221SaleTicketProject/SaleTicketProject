@@ -29,6 +29,8 @@ namespace WPFEventOperation
         public Window2(IAccountRepository accountRepository)
         {
             InitializeComponent();
+            this.WindowStyle = WindowStyle.None;
+            this.WindowState = WindowState.Maximized;
             _accountRepository = accountRepository;
             LoadData();
         }

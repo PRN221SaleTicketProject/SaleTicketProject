@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace BusinessObjects;
 
@@ -37,20 +36,14 @@ public partial class Prn221projectContext : DbContext
     public virtual DbSet<TransactionType> TransactionTypes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-   => optionsBuilder.UseSqlServer(GetConnectionString());
-    private string? GetConnectionString()
-    {
-        IConfiguration configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true).Build();
-        return configuration["ConnectionStrings:DB"];
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=PRN221Project;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC27149C6D0A");
+            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC27C96DC41F");
 
             entity.ToTable("Account");
 
@@ -81,7 +74,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Category__3214EC27E05CBCDD");
+            entity.HasKey(e => e.Id).HasName("PK__Category__3214EC277E146503");
 
             entity.ToTable("Category");
 
@@ -95,7 +88,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Event>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Event__3214EC2739ECAC16");
+            entity.HasKey(e => e.Id).HasName("PK__Event__3214EC276088597E");
 
             entity.ToTable("Event");
 
@@ -110,6 +103,7 @@ public partial class Prn221projectContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false);
             entity.Property(e => e.Name).HasMaxLength(255);
+            entity.Property(e => e.ServiceSponsor).HasMaxLength(255);
             entity.Property(e => e.SponsorId).HasColumnName("SponsorID");
             entity.Property(e => e.TicketQuantity).HasColumnName("Ticket_Quantity");
 
@@ -117,15 +111,14 @@ public partial class Prn221projectContext : DbContext
                 .HasForeignKey(d => d.CategoryId)
                 .HasConstraintName("FK__Event__CategoryI__49C3F6B7");
 
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Event)
-                .HasForeignKey<Event>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+            entity.HasOne(d => d.Sponsor).WithMany(p => p.Events)
+                .HasForeignKey(d => d.SponsorId)
                 .HasConstraintName("FK_Event_SponsorID");
         });
 
         modelBuilder.Entity<Promotion>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Promotio__3214EC27A5064105");
+            entity.HasKey(e => e.Id).HasName("PK__Promotio__3214EC275B251E3B");
 
             entity.ToTable("Promotion");
 
@@ -136,7 +129,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Role__3214EC274366E864");
+            entity.HasKey(e => e.Id).HasName("PK__Role__3214EC276E6B0E00");
 
             entity.ToTable("Role");
 
@@ -150,7 +143,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<SolvedTicket>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Solved_t__3214EC276DBB670E");
+            entity.HasKey(e => e.Id).HasName("PK__Solved_t__3214EC27A69936BB");
 
             entity.ToTable("Solved_ticket");
 
@@ -177,7 +170,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Ticket>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Ticket__3214EC27F062406C");
+            entity.HasKey(e => e.Id).HasName("PK__Ticket__3214EC277FE16B60");
 
             entity.ToTable("Ticket");
 
@@ -193,7 +186,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<Transaction>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27EDCDD4A5");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27A304AC82");
 
             entity.ToTable("Transaction");
 
@@ -222,7 +215,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<TransactionHistory>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC279734BAB8");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC2741B4EC9E");
 
             entity.ToTable("Transaction_history");
 
@@ -241,7 +234,7 @@ public partial class Prn221projectContext : DbContext
 
         modelBuilder.Entity<TransactionType>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC27F92666D9");
+            entity.HasKey(e => e.Id).HasName("PK__Transact__3214EC2702EE2C12");
 
             entity.ToTable("Transaction_type");
 

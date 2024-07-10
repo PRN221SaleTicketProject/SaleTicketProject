@@ -32,6 +32,8 @@ namespace WPFEventOperation
         public Window1(IAccountRepository accountRepository, IEventCategory eventCategory, ICategoryRepository categoryRepository, ITicketRepository ticketRepository)
         {
             InitializeComponent();
+            this.WindowStyle = WindowStyle.None;
+            this.WindowState = WindowState.Maximized;
             _accountRepository = accountRepository;
             _eventCategory = eventCategory;
             _categoryRepository = categoryRepository;

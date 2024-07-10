@@ -83,3 +83,13 @@ D:\Document\1_PRN211\PRN221\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0
 D:\Document\1_PRN211\PRN221\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\WPFEventOperation.pdb
 D:\Document\1_PRN211\PRN221\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\WPFEventOperation.genruntimeconfig.cache
 D:\Document\1_PRN211\PRN221\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\ref\WPFEventOperation.dll
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\WPFEventOperation.pdb
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\WPFEventOperation.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\Window1.g.cs
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\Window2.g.cs
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\WPFEventOperation_Content.g.cs
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\WPFEventOperation_MarkupCompile.cache
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\WPFEventOperation_MarkupCompile.lref
+C:\Users\Dell\Desktop\SaleTicketProject\WPFEventOperation\obj\Debug\net8.0-windows\WPFEventOperation.dll
