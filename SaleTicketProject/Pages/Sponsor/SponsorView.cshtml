@@ -30,6 +30,52 @@
     -->
 
     <style>
+        /* Basic styling for the select element */
+        #categories {
+            width: 200px; /* Adjust the width as needed */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            color: #333;
+            appearance: none; /* Remove default styling for better customization */
+            -webkit-appearance: none; /* For Safari */
+            -moz-appearance: none; /* For Firefox */
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 10l5 5 5-5"/></svg>'); /* Custom dropdown arrow */
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+
+            /* Hover effect for the select element */
+            #categories:hover {
+                border-color: #888;
+            }
+
+            /* Focus effect for the select element */
+            #categories:focus {
+                outline: none;
+                border-color: #555;
+                box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            }
+
+            /* Styling for the option elements */
+            #categories option {
+                padding: 10px;
+                font-size: 16px;
+                color: #333;
+                background-color: #f9f9f9;
+            }
+
+        /* Optional: Custom font and color for the label */
+        label[for="categories"] {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
         .alert {
             padding: 20px;
             background-color: #f44336;
@@ -165,15 +211,15 @@
                                     <td width="2%">:</td>
                                     <td>@Model.Account.Status</td>
                                 </tr>
-@*                                 <tr>
-                                    <th width="30%">Religion</th>
-                                    <td width="2%">:</td>
-                                    <td>Group</td>
+                                @*                                 <tr>
+                                <th width="30%">Religion</th>
+                                <td width="2%">:</td>
+                                <td>Group</td>
                                 </tr>
                                 <tr>
-                                    <th width="30%">blood</th>
-                                    <td width="2%">:</td>
-                                    <td>B+</td>
+                                <th width="30%">blood</th>
+                                <td width="2%">:</td>
+                                <td>B+</td>
                                 </tr> *@
                             </table>
                         </div>
@@ -206,17 +252,17 @@
         </div>
     </div>
 
-@*     @if (TempData["Message"] != null)
+    @*     @if (TempData["Message"] != null)
     {
-        <div class="alert warning">
-            @TempData["Message"]
-        </div>
+    <div class="alert warning">
+    @TempData["Message"]
+    </div>
     }
     @if (TempData["SuccessMessage"] != null)
     {
-        <div class="alert success">
-            @TempData["SuccessMessage"]
-        </div>
+    <div class="alert success">
+    @TempData["SuccessMessage"]
+    </div>
     } *@
 
     <div class="section best-deal">
