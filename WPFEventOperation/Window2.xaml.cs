@@ -120,16 +120,24 @@ namespace WPFEventOperation
                 Email = txtEmail.Text,
                 Wallet = null
             };
-
-            if (MessageBoxResult.Yes == MessageBox.Show("Do you want create new sponsor account?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
+            var checkemail = _accountRepository.GetAll().FirstOrDefault(x => x.Email.Equals(txtEmail.Text));
+            var checkphone = _accountRepository.GetAll().FirstOrDefault(x => x.Phone.Equals(txtPhone.Text));
+            if ((checkemail == null) && (checkphone == null))
             {
-                _accountRepository.Add(newAccount);
-                MessageBox.Show("create completed!", "Exit", MessageBoxButton.OK);
-                LoadData();
+                if (MessageBoxResult.Yes == MessageBox.Show("Do you want create new sponsor account?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
+                {
+                    _accountRepository.Add(newAccount);
+                    MessageBox.Show("create completed!", "Exit", MessageBoxButton.OK);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show($"create failed!");
+                }
             }
             else
             {
-                MessageBox.Show($"create failed!");
+                MessageBox.Show($" Email or Phone be used!");
             }
         }
 
@@ -146,24 +154,32 @@ namespace WPFEventOperation
                 MessageBox.Show("must number!");
                 return;
             }
-            if (MessageBoxResult.Yes == MessageBox.Show("Do you want update ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
+            var wallet =int.Parse(txtWallet.Text);
+            var acc = _accountRepository.GetById(int.Parse(txtId.Text));
+            if ((wallet < 10000000) && (acc.Status == 1))
             {
-                var updateWallet = _accountRepository.GetById(int.Parse(txtId.Text));
-                if (updateWallet == null)
+                if (MessageBoxResult.Yes == MessageBox.Show("Do you want update ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
                 {
-                    MessageBox.Show($"Account Not Found!");
-                    return;
+                    var updateWallet = _accountRepository.GetById(int.Parse(txtId.Text));
+                    if (updateWallet == null)
+                    {
+                        MessageBox.Show($"Account Not Found!");
+                        return;
+                    }
+                    updateWallet.Wallet = double.Parse(txtWallet.Text);
+                    _accountRepository.Update(updateWallet);
+                    MessageBox.Show("update completed!", "Exit", MessageBoxButton.OK);
+                    LoadData();
                 }
-                updateWallet.Wallet = double.Parse(txtWallet.Text);
-                _accountRepository.Update(updateWallet);
-                MessageBox.Show("update completed!", "Exit", MessageBoxButton.OK);
-                LoadData();
+                else
+                {
+                    MessageBox.Show($"update failed!");
+                }
             }
             else
             {
-                MessageBox.Show($"update failed!");
+                MessageBox.Show($"Account's wallet must be under 10 milion! Or Account banned!!!");
             }
-
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -177,6 +193,7 @@ namespace WPFEventOperation
             if (MessageBoxResult.Yes == MessageBox.Show("Do you want to ban this account?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
             {
                 UpdateAccount.Status = 0;
+                UpdateAccount.Wallet = 0;
                 _accountRepository.Update(UpdateAccount);
                 MessageBox.Show("ban completed!", "Exit", MessageBoxButton.OK);
                 LoadData();

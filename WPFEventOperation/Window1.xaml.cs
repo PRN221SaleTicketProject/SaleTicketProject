@@ -114,7 +114,7 @@ namespace WPFEventOperation
                 MessageBox.Show("must have link image");
                 return;
             }
-            var checkTime = @"^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/((19|20)\d\d)$";
+            var checkTime = @"^([1-9]|1[0-2])/([1-9]|[12][0-9]|3[01])/((19|20)\d\d)$";
             if (!Regex.IsMatch(txtDateStart.Text, checkTime) || !Regex.IsMatch(txtDateEnd.Text, checkTime))
             {
                 MessageBox.Show("you must fill the format MM/DD/YYYY with the real time!");
@@ -170,22 +170,103 @@ namespace WPFEventOperation
                 Quantity = int.Parse(txtTicketQuantity.Text),
                 Status = 1,
             };
-            if (MessageBoxResult.Yes == MessageBox.Show("Do you want create ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
+            var exist = _eventCategory.GetAll().FirstOrDefault(x => x.Name == newEvent.Name);
+            if (exist == null)
             {
-                _eventCategory.Add(newEvent);
-                _ticketRepository.Add(ticket);
-                MessageBox.Show("create completed!", "Exit", MessageBoxButton.OK);
-                LoadData();
+                if (MessageBoxResult.Yes == MessageBox.Show("Do you want create ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning))
+                {
+                    _eventCategory.Add(newEvent);
+                    _ticketRepository.Add(ticket);
+                    MessageBox.Show("create completed!", "Exit", MessageBoxButton.OK);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show($"create failed!");
+                }
             }
             else
             {
-                MessageBox.Show($"create failed!");
+                MessageBox.Show($"Event existed!");
             }
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            if(txt.Text.IsNullOrEmpty())
+            if (txt.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtCategpryType.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtTicketQuantity.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtLocation.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtDateStart.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtDateEnd.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtImage.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("please filed in");
+                return;
+            }
+            if (!txtImage.Text.StartsWith("https://"))
+            {
+                MessageBox.Show("must have link image");
+                return;
+            }
+            var checkTime = @"^([1-9]|1[0-2])/([1-9]|[12][0-9]|3[01])/((19|20)\d\d)$";
+            if (!Regex.IsMatch(txtDateStart.Text, checkTime) || !Regex.IsMatch(txtDateEnd.Text, checkTime))
+            {
+                MessageBox.Show("you must fill the format MM/DD/YYYY with the real time!");
+                return;
+            }
+            if (!int.TryParse(txtTicketQuantity.Text, out int quantity))
+            {
+                MessageBox.Show("must number!");
+                return;
+            }
+            if (int.Parse(txtTicketQuantity.Text) <= 0)
+            {
+                MessageBox.Show("must not smaller or equal 0!");
+                return;
+            }
+            var checkExist = _categoryRepository.GetById(int.Parse(txtCategpryType.Text));
+            if (checkExist == null)
+            {
+                MessageBox.Show("Type Not Exist!");
+                return;
+            }
+
+            if (DateTime.Parse(txtDateStart.Text) < DateTime.Now || DateTime.Parse(txtDateEnd.Text) < DateTime.Now)
+            {
+                MessageBox.Show("Event must be in future!");
+                return;
+            }
+            if (DateTime.Parse(txtDateStart.Text) > DateTime.Parse(txtDateEnd.Text))
+            {
+                MessageBox.Show("Date End invalid");
+                return;
+            }
+            if (txt.Text.IsNullOrEmpty())
             {
                 MessageBox.Show("please filed in");
                 return;

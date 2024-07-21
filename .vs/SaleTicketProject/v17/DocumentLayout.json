@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3439FAA1-A35D-45FD-A3C9-1D440E5549AB}|WPFEventOperation\\WPFEventOperation.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\wpfeventoperation\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3439FAA1-A35D-45FD-A3C9-1D440E5549AB}|WPFEventOperation\\WPFEventOperation.csproj|solutionrelative:wpfeventoperation\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\sponsor\\sponsorview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\sponsor\\sponsorview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\saleticketproject\\pages\\viewtransactionhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36A5AD60-372A-467B-8A52-598AC6A7CAF9}|SaleTicketProject\\SaleTicketProject.csproj|solutionrelative:saleticketproject\\pages\\viewtransactionhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3439FAA1-A35D-45FD-A3C9-1D440E5549AB}|WPFEventOperation\\WPFEventOperation.csproj|d:\\document\\1_prn211\\prn221\\saleticketproject\\wpfeventoperation\\window2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3439FAA1-A35D-45FD-A3C9-1D440E5549AB}|WPFEventOperation\\WPFEventOperation.csproj|solutionrelative:wpfeventoperation\\window2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 26,
           "Children": [
             {
               "$type": "Bookmark",
@@ -137,80 +121,34 @@
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Properties.cshtml",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Properties.cshtml",
-              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\Properties.cshtml",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Properties.cshtml",
-              "RelativeToolTip": "SaleTicketProject\\Pages\\Properties.cshtml",
-              "ViewState": "AQIAAK4AAAAAAAAAAAAAALcAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-11T03:19:38.575Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SponsorView.cshtml",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Sponsor\\SponsorView.cshtml",
-              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\Sponsor\\SponsorView.cshtml",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Sponsor\\SponsorView.cshtml",
-              "RelativeToolTip": "SaleTicketProject\\Pages\\Sponsor\\SponsorView.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAiwDQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-11T03:12:25.73Z",
+              "DocumentIndex": 0,
+              "Title": "Window1.xaml.cs",
+              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\WPFEventOperation\\Window1.xaml.cs",
+              "RelativeDocumentMoniker": "WPFEventOperation\\Window1.xaml.cs",
+              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\WPFEventOperation\\Window1.xaml.cs",
+              "RelativeToolTip": "WPFEventOperation\\Window1.xaml.cs",
+              "ViewState": "AQIAAOsAAAAAAAAAAAAcwO4AAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T18:29:13.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\Index.cshtml",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Index.cshtml",
-              "RelativeToolTip": "SaleTicketProject\\Pages\\Index.cshtml",
-              "ViewState": "AQIAAMQBAAAAAAAAAAAiwNkBAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T11:47:23.95Z",
+              "Title": "Window2.xaml.cs",
+              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\WPFEventOperation\\Window2.xaml.cs",
+              "RelativeDocumentMoniker": "WPFEventOperation\\Window2.xaml.cs",
+              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\WPFEventOperation\\Window2.xaml.cs",
+              "RelativeToolTip": "WPFEventOperation\\Window2.xaml.cs",
+              "ViewState": "AQIAALYAAAAAAAAAAAAswHsAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T17:56:42.017Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ViewProfile.cshtml",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\ViewProfile.cshtml",
-              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\ViewProfile.cshtml",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\ViewProfile.cshtml",
-              "RelativeToolTip": "SaleTicketProject\\Pages\\ViewProfile.cshtml",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwA8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T11:46:44.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Login.cshtml",
-              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\Login.cshtml",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\Login.cshtml",
-              "RelativeToolTip": "SaleTicketProject\\Pages\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T11:42:44.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ViewTransactionHIstory.cshtml",
-              "DocumentMoniker": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\ViewTransactionHIstory.cshtml",
-              "RelativeDocumentMoniker": "SaleTicketProject\\Pages\\ViewTransactionHIstory.cshtml",
-              "ToolTip": "D:\\Document\\1_PRN211\\PRN221\\SaleTicketProject\\SaleTicketProject\\Pages\\ViewTransactionHIstory.cshtml",
-              "RelativeToolTip": "SaleTicketProject\\Pages\\ViewTransactionHIstory.cshtml",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAAAEEAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-03T14:29:25.119Z"
             }
           ]
         },
