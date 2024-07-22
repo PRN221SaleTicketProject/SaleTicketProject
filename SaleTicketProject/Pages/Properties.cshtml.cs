@@ -23,7 +23,7 @@ namespace SaleTicketProject.Pages
         public void OnGet(int ID)
         {
             Account = _accountRepository.GetById(ID)!;
-            Events = _eventRepository.GetAllInclude().ToList();
+            Events = _eventRepository.GetAllInclude().Where(a=>a.DateEnd > DateOnly.FromDateTime(DateTime.Now)).ToList();
         }
 
         [BindProperty]

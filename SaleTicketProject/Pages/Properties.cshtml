@@ -174,7 +174,14 @@
                                     @*                                 <div >
                             <a asp-page="/Property-details">Schedule a visit</a>
                             </div> *@
-                                    @if (Model.Account != null)
+                                    @if (article.DateStart <= DateOnly.FromDateTime(DateTime.Now))
+                                    {
+                                        <div class="section-heading text-center">
+                                            <h6>ONGOING EVENT CANNOT BUY TICKETS</h6>
+                                        </div>
+                                        <br/>
+                                    }
+                                    else if (Model.Account != null)
                                     {
                                         <div class="main-button">
                                             <button type="submit" asp-page-handler="Property" style="border: none"><a style="color: white">Schedule a visit</a></button>

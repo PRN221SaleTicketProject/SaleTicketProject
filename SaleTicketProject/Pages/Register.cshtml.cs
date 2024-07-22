@@ -82,7 +82,8 @@ namespace SaleTicketProject.Pages
                 Email = email,
                 Password = password,
                 RoleId = 1,
-                Status = 1
+                Status = 1,
+                Wallet=0
             };
 
             var memberStaff = _systemAccountService.Add(newAccount);
