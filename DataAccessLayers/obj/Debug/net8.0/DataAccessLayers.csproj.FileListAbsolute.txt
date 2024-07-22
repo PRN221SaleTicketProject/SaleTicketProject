@@ -30,3 +30,19 @@ D:\Document\1_PRN211\PRN221\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\
 D:\Document\1_PRN211\PRN221\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\refint\DataAccessLayers.dll
 D:\Document\1_PRN211\PRN221\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.pdb
 D:\Document\1_PRN211\PRN221\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\ref\DataAccessLayers.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\bin\Debug\net8.0\DataAccessLayers.deps.json
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\bin\Debug\net8.0\DataAccessLayers.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\bin\Debug\net8.0\DataAccessLayers.pdb
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\bin\Debug\net8.0\BusinessObjects.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\bin\Debug\net8.0\BusinessObjects.pdb
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.AssemblyInfo.cs
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.sourcelink.json
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAcce.353F41F5.Up2Date
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\refint\DataAccessLayers.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\DataAccessLayers.pdb
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\DataAccessLayers\obj\Debug\net8.0\ref\DataAccessLayers.dll

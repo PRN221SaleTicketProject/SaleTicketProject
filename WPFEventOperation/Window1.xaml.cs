@@ -38,13 +38,14 @@ namespace WPFEventOperation
             _eventCategory = eventCategory;
             _categoryRepository = categoryRepository;
             LoadData();
+            bindcombo();
             _ticketRepository = ticketRepository;
         }
 
         private void LoadData()
         {
             this.dgData.ItemsSource = null;
-            var accounts = _eventCategory.GetAll().Where(a => a.Status == 1).Select(a => new {a.Id, a.Name, a.CategoryId, a.TicketQuantity, a.Location, a.DateStart,a.DateEnd,a.Image });
+            var accounts = _eventCategory.GetAllIncludeType().Where(a => a.Status == 1).Select(a => new {a.Id, a.Name, a.CategoryId,a.Category!.Type, a.TicketQuantity, a.Location, a.DateStart,a.DateEnd,a.Image });
             dgData.ItemsSource = accounts;
         }
 
@@ -61,6 +62,7 @@ namespace WPFEventOperation
                 btnUpdate.IsEnabled = true;
                 btnDelete.IsEnabled = true;
                 _isCreateMode = false;
+                LoadData();
             }
             else
             {
@@ -69,6 +71,7 @@ namespace WPFEventOperation
                 btnUpdate.IsEnabled = false;
                 btnDelete.IsEnabled = false;
                 _isCreateMode = true;
+                dgData.ItemsSource = null;
             }
         }
 
@@ -130,7 +133,7 @@ namespace WPFEventOperation
                 MessageBox.Show("must not smaller or equal 0!");
                 return;
             }
-            var checkExist = _categoryRepository.GetById(int.Parse(txtCategpryType.Text));
+            var checkExist = _categoryRepository.getByCateName(txtCategpryType.Text);
             if (checkExist == null)
             {
                 MessageBox.Show("Type Not Exist!");
@@ -152,7 +155,7 @@ namespace WPFEventOperation
             {
                 Id = id + 1,
                 Name=txt.Text,
-                CategoryId=int.Parse(txtCategpryType.Text),
+                CategoryId=checkExist.Id,
                 TicketQuantity = int.Parse(txtTicketQuantity.Text),
                 Location=txtLocation.Text,
                 DateStart= DateOnly.Parse(txtDateStart.Text),
@@ -249,7 +252,7 @@ namespace WPFEventOperation
                 MessageBox.Show("must not smaller or equal 0!");
                 return;
             }
-            var checkExist = _categoryRepository.GetById(int.Parse(txtCategpryType.Text));
+            var checkExist = _categoryRepository.getByCateName(txtCategpryType.Text); 
             if (checkExist == null)
             {
                 MessageBox.Show("Type Not Exist!");
@@ -296,6 +299,7 @@ namespace WPFEventOperation
                     return;
                 }
                 UpdateEvent.Name = txt.Text;
+                UpdateEvent.CategoryId = checkExist.Id;
                 UpdateEvent.TicketQuantity = int.Parse(txtTicketQuantity.Text);
                 UpdateEvent.Location = txtLocation.Text;
                 _eventCategory.Update(UpdateEvent);
@@ -345,6 +349,23 @@ namespace WPFEventOperation
         {
             Application.Current.Shutdown();
             return;
+        }
+
+        public List<Category> cates { get; set; }
+        private void bindcombo()
+        {
+            Prn221projectContext dc = new Prn221projectContext();
+            var cate = dc.Categories.ToList();
+            cates = cate;
+            DataContext = cates;
+        }
+
+        private void cbCategoryType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbCategoryType.SelectedItem is Category cate)
+            {
+                txtCategpryType.Text = cate.Type; // Assuming txtCategoryType is a TextBox or similar control
+            }
         }
     }
 }

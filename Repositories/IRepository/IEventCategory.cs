@@ -10,5 +10,6 @@ namespace Repositories.IRepository
     public interface IEventCategory : IGenericRepository<Event>
     {
         IEnumerable<Event> GetAllInclude();
+        IEnumerable<Event> GetAllIncludeType();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BusinessObjects;
 using DataAccessLayers;
 using DataAccessLayers.UnitOfWork;
+using Microsoft.EntityFrameworkCore;
 using Repositories.IRepository;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,10 @@ namespace Repositories.Repository
         public IEnumerable<Event> GetAllInclude()
         {
             return _unitOfWork.EventDAO.GetAllInclude();
+        }
+        public IEnumerable<Event> GetAllIncludeType()
+        {
+            return _unitOfWork.EventDAO.GetAllIncludeType();
         }
     }
 }

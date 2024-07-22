@@ -34,3 +34,21 @@ D:\Document\1_PRN211\PRN221\SaleTicketProject\Repositories\obj\Debug\net8.0\Repo
 D:\Document\1_PRN211\PRN221\SaleTicketProject\Repositories\obj\Debug\net8.0\refint\Repositories.dll
 D:\Document\1_PRN211\PRN221\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.pdb
 D:\Document\1_PRN211\PRN221\SaleTicketProject\Repositories\obj\Debug\net8.0\ref\Repositories.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\bin\Debug\net8.0\Repositories.deps.json
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\bin\Debug\net8.0\Repositories.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\bin\Debug\net8.0\Repositories.pdb
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\bin\Debug\net8.0\BusinessObjects.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\bin\Debug\net8.0\DataAccessLayers.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\bin\Debug\net8.0\DataAccessLayers.pdb
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\bin\Debug\net8.0\BusinessObjects.pdb
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Reposito.787EC4B2.Up2Date
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\Repositories.pdb
+C:\Users\Dell\Desktop\New folder\SaleTicketProject\Repositories\obj\Debug\net8.0\ref\Repositories.dll

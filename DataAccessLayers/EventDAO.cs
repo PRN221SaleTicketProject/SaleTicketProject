@@ -14,5 +14,9 @@ namespace DataAccessLayers
         {
             return _context.Events.Include(a => a.Sponsor).ToList();
         }
+        public IEnumerable<Event> GetAllIncludeType()
+        {
+            return _context.Events.Include(a => a.Category).ToList();
+        }
     }
 }

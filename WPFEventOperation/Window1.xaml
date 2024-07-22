@@ -44,7 +44,7 @@
             <TextBox x:Name="txt" Margin ="4,4,4,4" Grid.Column="2" Grid.Row="1" Text="{Binding SelectedItem.Name, ElementName=dgData, Mode=OneWay}" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
 
             <Label x:Name="label1" Margin ="2,2,2,2"  Content="Category Type" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="txtCategpryType" Margin ="4,4,4,4" Grid.Column="2" Grid.Row="2" Text="{Binding SelectedItem.CategoryId, ElementName=dgData, Mode=OneWay}" TextWrapping="Wrap" Grid.ColumnSpan="2" />
+            <TextBox x:Name="txtCategpryType" Margin ="4,4,4,4" Grid.Column="2" Grid.Row="2"  TextWrapping="Wrap" Grid.ColumnSpan="2" IsReadOnly="True" Height="19"/>
 
             <Label x:Name="label2" Margin ="2,2,2,2" Grid.Column="0" Grid.Row="3" Content="Ticket Quantity" Grid.ColumnSpan="2" />
             <TextBox x:Name="txtTicketQuantity" Margin ="4,4,4,4" Grid.Column="2" Grid.Row="3" Text="{Binding SelectedItem.TicketQuantity, ElementName=dgData, Mode=OneWay}" TextWrapping="Wrap" Grid.ColumnSpan="2" />
@@ -79,6 +79,7 @@
             <TextBlock Grid.Row="8" Grid.Column="0" Text="Seminar" Margin="5,126,5,290" />
             <Label x:Name="label6_Copy" Margin ="5,49,86,361" Content="Take Note:" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="3"/>
 
+            <ComboBox x:Name="cbCategoryType" SelectedItem="{Binding SelectedItem.CategoryId, ElementName=dgData, Mode=OneWay}" ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Type" Grid.Column="2" HorizontalAlignment="Left" Margin="4,4,4,4" Grid.Row="2" VerticalAlignment="Top" SelectionChanged="cbCategoryType_SelectionChanged" Grid.ColumnSpan="2" Width="1390" Height="22"/>
         </Grid>
     </Grid>
 </Window>

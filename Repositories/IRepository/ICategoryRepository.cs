@@ -9,5 +9,6 @@ namespace Repositories.IRepository
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
+        public Category? getByCateName(string name);
     }
 }
