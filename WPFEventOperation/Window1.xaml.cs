@@ -72,6 +72,7 @@ namespace WPFEventOperation
                 btnDelete.IsEnabled = false;
                 _isCreateMode = true;
                 dgData.ItemsSource = null;
+                txtCategpryType.Text = null;
             }
         }
 
@@ -201,7 +202,6 @@ namespace WPFEventOperation
                     _eventCategory.Add(newEvent);
                     _ticketRepository.Add(ticket);
                     MessageBox.Show("create completed!", "Exit", MessageBoxButton.OK);
-                    LoadData();
                 }
                 else
                 {
@@ -374,8 +374,7 @@ namespace WPFEventOperation
         public List<Category> cates { get; set; }
         private void bindcombo()
         {
-            Prn221projectContext dc = new Prn221projectContext();
-            var cate = dc.Categories.ToList();
+            var cate = _categoryRepository.GetAll().ToList();
             cates = cate;
             DataContext = cates;
         }
@@ -384,7 +383,7 @@ namespace WPFEventOperation
         {
             if (cbCategoryType.SelectedItem is Category cate)
             {
-                txtCategpryType.Text = cate.Type; // Assuming txtCategoryType is a TextBox or similar control
+                txtCategpryType.Text = cate.Type;
             }
         }
     }
