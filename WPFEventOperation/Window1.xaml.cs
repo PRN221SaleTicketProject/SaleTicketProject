@@ -82,6 +82,11 @@ namespace WPFEventOperation
                 MessageBox.Show("please filed in");
                 return;
             }
+            if (txt.Text.Length > 255)
+            {
+                MessageBox.Show("equal or over 255? too long!");
+                return;
+            }
             if (txtCategpryType.Text.IsNullOrEmpty())
             {
                 MessageBox.Show("please filed in");
@@ -95,6 +100,11 @@ namespace WPFEventOperation
             if (txtLocation.Text.IsNullOrEmpty())
             {
                 MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtLocation.Text.Length > 188)
+            {
+                MessageBox.Show("your filling is not like a location or country the longest city name which is: Krung Thep Mahanakhon Amon Rattanakosin Mahinthara Yuthaya Mahadilok Phop Noppharat Ratchathani Burirom Udomratchaniwet Mahasathan Amon Piman Awatan Sathit Sakkathattiya Witsanukam Prasit which is BANGKOK!");
                 return;
             }
             if (txtDateStart.Text.IsNullOrEmpty())
@@ -117,6 +127,11 @@ namespace WPFEventOperation
                 MessageBox.Show("must have link image");
                 return;
             }
+            if(txtImage.Text.Length > 255)
+            {
+                MessageBox.Show("link too long!");
+                return;
+            }
             var checkTime = @"^([1-9]|1[0-2])/([1-9]|[12][0-9]|3[01])/((19|20)\d\d)$";
             if (!Regex.IsMatch(txtDateStart.Text, checkTime) || !Regex.IsMatch(txtDateEnd.Text, checkTime))
             {
@@ -131,6 +146,11 @@ namespace WPFEventOperation
             if(int.Parse(txtTicketQuantity.Text) <= 0)
             {
                 MessageBox.Show("must not smaller or equal 0!");
+                return;
+            }
+            if (int.Parse(txtTicketQuantity.Text) > 9000000)
+            {
+                MessageBox.Show("quantity ticket cannot over 9 million!");
                 return;
             }
             var checkExist = _categoryRepository.getByCateName(txtCategpryType.Text);

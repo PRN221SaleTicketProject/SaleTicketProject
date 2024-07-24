@@ -71,13 +71,8 @@
             <Button x:Name="btnClose" Content="Close" Grid.Column="3" Margin="695,265,0,107" Grid.Row="8" Width="120" Background="Black" Foreground="White" Click="btnClose_Click" Height="64" HorizontalAlignment="Left"/>
 
             <!-- Row 1 -->
-            <TextBlock Grid.Row="8" Grid.Column="0" Text="Category Name" Margin="5,85,5,-45" Grid.RowSpan="2" />
-            <TextBlock Grid.Row="8" Grid.Column="1" Text="Id" Margin="5,85,5,-45" Grid.RowSpan="2" />
 
             <!-- Row 2 -->
-            <TextBlock Grid.Row="8" Grid.Column="1" Text="1" Margin="5,126,5,290" />
-            <TextBlock Grid.Row="8" Grid.Column="0" Text="Seminar" Margin="5,126,5,290" />
-            <Label x:Name="label6_Copy" Margin ="5,49,86,361" Content="Take Note:" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="3"/>
 
             <ComboBox x:Name="cbCategoryType" SelectedItem="{Binding SelectedItem.CategoryId, ElementName=dgData, Mode=OneWay}" ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Type" Grid.Column="2" HorizontalAlignment="Left" Margin="4,4,4,4" Grid.Row="2" VerticalAlignment="Top" SelectionChanged="cbCategoryType_SelectionChanged" Grid.ColumnSpan="2" Width="1390" Height="22"/>
         </Grid>

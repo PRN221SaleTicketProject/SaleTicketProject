@@ -55,6 +55,7 @@ namespace WPFEventOperation
                 btnUpdate.IsEnabled = true;
                 btnDelete.IsEnabled = true;
                 _isCreateMode = false;
+                LoadData();
             }
             else
             {
@@ -63,6 +64,7 @@ namespace WPFEventOperation
                 btnUpdate.IsEnabled = false;
                 btnDelete.IsEnabled = false;
                 _isCreateMode = true;
+                dgData.ItemsSource = null;
             }
         }
 
@@ -73,9 +75,19 @@ namespace WPFEventOperation
                 MessageBox.Show("please filed in");
                 return;
             }
+            if(txtName.Text.Length  > 100)
+            {
+                MessageBox.Show("equal or over 100 charactics? too long!");
+                return;
+            }
             if (txtAdress.Text.IsNullOrEmpty())
             {
                 MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtAdress.Text.Length > 255)
+            {
+                MessageBox.Show("equal or over 255 charactics? too long!");
                 return;
             }
             if (txtPhone.Text.IsNullOrEmpty())
@@ -86,6 +98,11 @@ namespace WPFEventOperation
             if (txtPassword.Text.IsNullOrEmpty())
             {
                 MessageBox.Show("please filed in");
+                return;
+            }
+            if (txtPassword.Text.Length > 255)
+            {
+                MessageBox.Show("equal or over 255 charactics? too long!");
                 return;
             }
             if (txtEmail.Text.IsNullOrEmpty())
@@ -118,7 +135,7 @@ namespace WPFEventOperation
                 Status = 1,
                 Password = txtPassword.Text,
                 Email = txtEmail.Text,
-                Wallet = null
+                Wallet = 0
             };
             var checkemail = _accountRepository.GetAll().FirstOrDefault(x => x.Email.Equals(txtEmail.Text));
             var checkphone = _accountRepository.GetAll().FirstOrDefault(x => x.Phone.Equals(txtPhone.Text));
