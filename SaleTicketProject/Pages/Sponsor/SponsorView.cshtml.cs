@@ -33,7 +33,7 @@ namespace SaleTicketProject.Pages.Sponsor
 
             Account = _accountRepository.GetById(ID)!;
             RoleName = _roleRepository.GetById((int)Account.RoleId);
-            Events = _eventRepository.GetAll().ToList();
+            Events = _eventRepository.GetAll().Where(a => a.DateStart > DateOnly.FromDateTime(DateTime.Now)).ToList();
         }
 
         [BindProperty]
