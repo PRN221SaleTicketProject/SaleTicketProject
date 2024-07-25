@@ -64,6 +64,11 @@ namespace SaleTicketProject.Pages.Sponsor
         {
             var newEvent = _eventRepository.GetById(Id) ?? throw new Exception();
             Account = _accountRepository.GetById(AccountId) ?? throw new Exception();
+            if(newEvent.SponsorId != null)
+            {
+                TempData["Message"] = "Event is already sponsored by ANOTHER SPONSOR!";
+                return RedirectToPage(new { ID = Account.Id });
+            }
             newEvent.SponsorId = Account.Id;
             newEvent.ServiceSponsor = ServiceSponsor;
             _eventRepository.Update(newEvent);
